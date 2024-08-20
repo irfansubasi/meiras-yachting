@@ -1,0 +1,23 @@
+.discover{
+    background-image: url('../assets/discover-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.discover .box{
+    padding: 5rem;
+    width: 25rem;
+    height: 25rem;
+}
+
+.info-col{
+    background: #092648;
+}
+
+.mini-contact{
+    background-image: url('../assets/mini-contact.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
