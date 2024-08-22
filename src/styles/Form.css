@@ -1,0 +1,30 @@
+.contact-form{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    background: #092648;
+    width: 100%;
+}
+
+.form-head h3{
+    margin: 0;
+}
+
+.form-container input{
+    background-color: #F0F0F0;
+}
+
+.form-container textarea{
+    background-color: #F0F0F0;
+    height: 6rem!important;
+}

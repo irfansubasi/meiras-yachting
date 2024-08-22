@@ -1,8 +1,31 @@
 .navbar-logo{
-    width: 10rem;
+    width: 9rem;
     height: auto;
 }
 
-.nav-item{
-    margin: 0 2rem;
+.navbar{
+    margin: 2rem!important;
+    color: #092648!important;
+}
+
+.navbar .navbar-nav .nav-item{
+    float: left;
+    padding: 0 3vw;
+    font-size: 14px;
+    border-right: 1px #092648 solid;
+    line-height: 0.3rem;
+}
+
+.navbar .navbar-nav .nav-item a{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #092648;
+}
+
+.navbar .navbar-nav .nav-item a.active{
+    color: #378AED!important;
+}
+
+.navbar .navbar-nav .nav-item:last-child{
+    border-right: none;
 }

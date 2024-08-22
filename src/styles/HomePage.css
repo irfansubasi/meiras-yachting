@@ -6,13 +6,35 @@
 }
 
 .discover .box{
-    padding: 5rem;
+    padding: 5rem 2rem;
     width: 25rem;
     height: 25rem;
 }
 
 .info-col{
-    background: #092648;
+    background-color: #F4F9FF;
+}
+
+.info-col .row{
+    background-color: #092648;
+}
+
+.info-col .col{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin: 0 1rem;
+}
+
+.info-col .col p{
+    margin: 0;
+}
+
+.info-col .col span{
+    font-weight: 300;
 }
 
 .mini-contact{
@@ -20,4 +42,28 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    color: #092648;
+}
+
+.social-col a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #092648;
+}
+
+.social-col a p{
+    margin-top: 0.5rem;
+}
+
+.yacht-svg{
+    width: 8rem;
+    height: auto;
+}
+
+.info-svg{
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 2rem;
 }

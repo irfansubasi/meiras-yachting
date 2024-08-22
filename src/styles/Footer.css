@@ -1,0 +1,53 @@
+footer{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 0.9rem;
+    position: relative;
+}
+
+.brand-socials img{
+    width: 10rem;
+    height: auto;
+}
+
+.brand-socials .socials a{
+    color: #092649;
+    margin: 0.4rem 0;
+}
+
+.brand-socials .socials a:hover{
+    transform: scale(1.1);
+}
+
+.brand-socials .socials span{
+    color: #092649;
+    margin-left: 1rem;
+}
+
+.site-map ul:nth-child(2){
+    margin-left: 10rem;
+}
+
+.site-map ul li::marker{
+    color: #092649;
+    font-size: 1.1rem;
+}
+
+.site-map ul li a{
+    color: #092649;
+    font-size: 1rem;
+}
+
+.copyright{
+    color: #092649;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.copyright a{
+    text-decoration: underline;
+}
