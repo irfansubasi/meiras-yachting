@@ -13,7 +13,7 @@ export default function Header({page}) {
     }else{
 
         let styleType = {
-            height: "60vh",
+            height: "70vh",
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
