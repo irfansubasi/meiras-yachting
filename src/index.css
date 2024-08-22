@@ -1,3 +1,18 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Mavel Regular';
+  src: url('./fonts/Mavel-Regular.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Mavel Italic';
+  src: url('./fonts/Mavel-Italic.otf') format('truetype');
+}
+
 *{
   margin: 0;
   padding: 0;
@@ -6,4 +21,13 @@
 
 html{
   font-size: 16px;
+}
+
+body{
+  font-family: 'Mavel Regular', sans-serif;
+}
+
+a{
+  text-decoration: none;
+  color: #000000;
 }
