@@ -5,7 +5,8 @@ export default function Header({page}) {
         return(
             <header className="home-header">
                 <div className="slogan container">
-                    <h1>Mavi Denizlerdeki Maceranız<br/>Bizimle Başlıyor</h1>
+                    <h1 className='span-head'>Mavi Denizlerdeki</h1>
+                    <h1>Maceranız Bizimle Başlıyor</h1>
                 </div>
             </header>
         );
