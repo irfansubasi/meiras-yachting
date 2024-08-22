@@ -20,11 +20,11 @@ export default function Header({page}) {
         };
 
         if(page === "about"){
-            styleType = { ...styleType, backgroundImage: "url('../src/assets/about-header.jpg')" };
+            styleType = { ...styleType, backgroundImage: "url('../assets/about-header.jpg')" };
         }else if(page === "rent"){
-            styleType = { ...styleType, backgroundImage: "url('../src/assets/rent-header.jpg')" };
+            styleType = { ...styleType, backgroundImage: "url('../assets/rent-header.jpg')" };
         }else{
-            styleType = { ...styleType, backgroundImage: "url('../src/assets/services-header.jpg')" };
+            styleType = { ...styleType, backgroundImage: "url('../assets/services-header.jpg')" };
         }
 
         return(
