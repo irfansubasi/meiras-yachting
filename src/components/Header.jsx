@@ -1,6 +1,4 @@
 import '../styles/Header.css';
-import aboutHeader from '../assets/about-header.jpg';
-import rentHeader from '../assets/rent-header.jpg';
 export default function Header({page}) {
 
     if(page === "home"){
