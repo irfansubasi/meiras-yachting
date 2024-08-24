@@ -17,19 +17,19 @@ export default function Nav() {
                         <Link className="nav-link active" to="/">Anasayfa</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" aria-current="page" to="/about">Hakkımızda</Link>
+                        <Link className="nav-link" to="/about">Hakkımızda</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" aria-current="page" href="#">Yat Kiralama</Link>
+                        <Link className="nav-link" href="#">Yat Kiralama</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" aria-current="page" href="#">Hizmetlerimiz</Link>
+                        <Link className="nav-link" href="#">Hizmetlerimiz</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" aria-current="page" href="#">Brokerage</Link>
+                        <Link className="nav-link" href="#">Brokerage</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" aria-current="page" href="#">İletişim</Link>
+                        <Link className="nav-link" to="/contact">İletişim</Link>
                     </li>
                 </ul>
             </div>

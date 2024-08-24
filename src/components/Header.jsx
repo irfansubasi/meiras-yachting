@@ -24,7 +24,7 @@ export default function Header({page}) {
             styleType = { ...styleType, backgroundImage: "url('../assets/about-header.jpg')" };
         }else if(page === "rent"){
             styleType = { ...styleType, backgroundImage: "url('../assets/rent-header.jpg')" };
-        }else{
+        }else if(page === "services"){
             styleType = { ...styleType, backgroundImage: "url('../assets/services-header.jpg')" };
         }
 

@@ -5,7 +5,7 @@ export default function Form() {
             <div className="form-head p-5">
                 <h3>BİLGİ AL</h3>
             </div>
-            <div className="form-container bg-white p-5 w-100">
+            <div className="form-body bg-white p-5 w-100">
                 <form action="" className='p-5'>
                     <div className="row">
                         <div className="col-md-6 mb-4">

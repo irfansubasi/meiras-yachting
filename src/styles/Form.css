@@ -20,11 +20,11 @@
     margin: 0;
 }
 
-.form-container input{
+.form-body input{
     background-color: #F0F0F0;
 }
 
-.form-container textarea{
+.form-body textarea{
     background-color: #F0F0F0;
     height: 6rem!important;
 }
