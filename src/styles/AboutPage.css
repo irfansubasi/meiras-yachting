@@ -1,0 +1,57 @@
+.about-us .about-section .about-logo{
+    width: 15rem;
+    height: auto;
+}
+
+.about-us .about-section{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.about-container{
+    color: #092649;
+    background-color: #ffffff;
+    box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.2);
+}
+
+.about-us .about-section h3{
+    background-color: #092649;
+    color: #ffffff;
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+}
+
+.about-us .about-section p{
+    padding: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.about-us .about-section .explain{
+    flex-basis: 40vw;
+}
+
+.about-socials{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.social-box-single{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem;
+}
+
+.social-box-single a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
