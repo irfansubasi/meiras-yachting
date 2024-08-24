@@ -13,6 +13,7 @@ export default function Header({page}) {
     }else{
 
         let styleType = {
+            position: "relative",
             height: "70vh",
             backgroundSize: "cover",
             backgroundPosition: "center",
