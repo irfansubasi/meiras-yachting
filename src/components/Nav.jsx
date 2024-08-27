@@ -23,7 +23,7 @@ export default function Nav() {
                         <Link className="nav-link" href="#">Yat Kiralama</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" href="#">Hizmetlerimiz</Link>
+                        <Link className="nav-link" to="/services">Hizmetlerimiz</Link>
                     </li>
                     <li className="nav-item">
                         <Link className="nav-link" href="#">Brokerage</Link>

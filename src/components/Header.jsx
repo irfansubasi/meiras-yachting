@@ -14,14 +14,14 @@ export default function Header({page}) {
 
         let styleType = {
             position: "relative",
-            height: "70vh",
+            height: "55vh",
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
         };
 
         if(page === "about"){
-            styleType = { ...styleType, backgroundImage: "url('../assets/about-header.jpg')" };
+            styleType = { ...styleType, backgroundPosition: "bottom",backgroundImage: "url('../assets/about-header.jpg')" };
         }else if(page === "rent"){
             styleType = { ...styleType, backgroundImage: "url('../assets/rent-header.jpg')" };
         }else if(page === "services"){
