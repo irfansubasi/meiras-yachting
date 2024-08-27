@@ -34,3 +34,21 @@
     height: 3rem;
     margin: 1rem 0;
 }
+
+.services .position-absolute{
+    transform: translate(-50%, -50%);
+    top: 67%;
+    left: 50%;
+}
+
+.exp-row-body{
+    color: #ffffff;
+    background-color: #092649;
+}
+
+.exp-row-img{
+    background-image: url('../assets/food-service.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}

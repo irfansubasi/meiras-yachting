@@ -8,8 +8,8 @@ export default function ServicesPage() {
             <Nav />
             <Header page="services"/>
             <main>
-                <section className="services">
-                    <div className="container">
+                <section className="services" style={{height:"50vh"}}>
+                    <div className="container position-absolute">
                         <div className="row services-boxes">
                             <div className="col-lg-3 col-md-6 d-flex">
                                 <div className="services-box">
@@ -116,6 +116,25 @@ export default function ServicesPage() {
                             </div>
                         </div>
                     </div>
+                </section>
+                <section className="services-exp">
+                        <div className="row">
+                            <div className="col-9 exp-row-body">
+                                    <h3>Kumanya Hizmetleri</h3>
+                                    <div className="border"></div>
+                                    <p className="lead">
+                                        Yerel lezzetlerden dünya mutfaklarına kadar geniş bir ürün yelpazesi sunuyoruz.
+                                        <br />
+                                        <br />
+                                        Hızlı ve güvenilir teslimat hizmetimiz sayesinde, talep ettiğiniz ürünler en kısa sürede yatınıza ulaştırılır.
+                                        <br />
+                                        <br />
+                                        Yat kiralama hizmetlerimizde, her ayrıntının sizin için düşünüldüğünü bilmenin rahatlığıyla, sadece denizin ve tatilin keyfini çıkarın. Kumanya hizmetlerimizle ilgili daha fazla bilgi almak ve özel taleplerinizi iletmek için bizimle iletişime geçebilirsiniz.
+                                    </p>
+                            </div>
+                            <div className="col-3 exp-row-img">
+                            </div>
+                        </div>
                 </section>
             </main>
         </>
