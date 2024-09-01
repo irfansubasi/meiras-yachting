@@ -20,14 +20,13 @@
     background-color: #092648;
 }
 
-.info-col .col{
+.info-col .info-col-box{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    margin: 0 1rem;
 }
 
 .info-col .col p{
@@ -67,4 +66,15 @@
     width: 3rem;
     height: 3rem;
     margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 991px){
+
+    .info-col{
+        background-color: #092648;
+    }
+
+    .info-col .row{
+        margin: 0!important;
+    }
 }

@@ -37,7 +37,7 @@ export default function HomePage() {
                 <section className='info-col'>
                     <div className="container text-center text-white">
                         <div className="row p-5 m-5">
-                            <div className="col p-4 border">
+                            <div className="info-col-box col-lg-4 col-md-12 p-4 border">
                                 <div className="info-icon col-6">
                                     <svg className='info-svg' viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M24.785 49.5491C11.4418 49.5491 0.631958 38.7393 0.631958 25.4038C0.631958 12.0683 11.4418 1.25073 24.785 1.25073C38.1283 1.25073 48.9381 12.0606 48.9381 25.4038" stroke="white" strokeWidth="0.777126" strokeMiterlimit="10" strokeLinecap="square"/>
@@ -59,7 +59,7 @@ export default function HomePage() {
                                 <p>7/24 Destek</p>
                                 <span>Her Durumda Yanınızdayız</span>
                             </div>
-                            <div className="col p-4 border">
+                            <div className="info-col-box col-lg-4 col-md-12 p-4 border">
                                 <div className="info-icon col-6">
                                     <svg className='info-svg' viewBox="0 0 46 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M12.4207 41.5134C12.4207 35.6538 17.1689 30.8978 23.0362 30.8978C28.8958 30.8978 33.6518 35.6461 33.6518 41.5134H12.4207Z" stroke="white" strokeWidth="0.777126" strokeLinecap="round" strokeLinejoin="round"/>
@@ -75,7 +75,7 @@ export default function HomePage() {
                                 <p>Profesyonel Ekip</p>
                                 <span>Profesyonel Çözümler</span>
                             </div>
-                            <div className="col p-4 border">
+                            <div className="info-col-box col-lg-4 col-md-12 p-4 border">
                                 <div className="info-icon col-6">
                                     <svg className='info-svg' viewBox="0 0 47 54" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M20.1033 52.5824C21.2259 52.7553 22.3829 52.8418 23.5572 52.8418C35.9567 52.8418 46.0075 42.7748 46.0075 30.3553C46.0075 17.9358 35.9567 7.86877 23.5572 7.86877C11.1577 7.86877 1.10692 17.9358 1.10692 30.3553C1.10692 39.0385 6.01145 46.5629 13.1955 50.3164" stroke="white" strokeWidth="0.777126" strokeLinecap="round" strokeLinejoin="round"/>
