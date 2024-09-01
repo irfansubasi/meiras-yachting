@@ -8,6 +8,10 @@
     color: #092648!important;
 }
 
+.navbar .active{
+    color: #378AED!important;
+}
+
 .navbar .navbar-nav .nav-item{
     float: left;
     padding: 0 3vw;
@@ -20,10 +24,6 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     color: #092648;
-}
-
-.navbar .navbar-nav .nav-item a.active{
-    color: #378AED!important;
 }
 
 .navbar .navbar-nav .nav-item:last-child{

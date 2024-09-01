@@ -1,6 +1,6 @@
 import navLogo from '../assets/nav-logo.png';
 import '../styles/Nav.css';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export default function Nav() {
     return(
@@ -14,22 +14,22 @@ export default function Nav() {
             <div className="collapse navbar-collapse" id="navbarContent">
                 <ul className="navbar-nav m-auto mb-2 mb-lg-0">
                     <li className="nav-item">
-                        <Link className="nav-link active" to="/">Anasayfa</Link>
+                        <NavLink className="nav-link" to="/">Anasayfa</NavLink>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to="/about">Hakkımızda</Link>
+                        <NavLink className="nav-link" to="/about">Hakkımızda</NavLink>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" href="#">Yat Kiralama</Link>
+                        <NavLink className="nav-link" to="/rent">Yat Kiralama</NavLink>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to="/services">Hizmetlerimiz</Link>
+                        <NavLink className="nav-link" to="/services">Hizmetlerimiz</NavLink>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" href="#">Brokerage</Link>
+                        <NavLink className="nav-link" to="/brokerage">Brokerage</NavLink>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to="/contact">İletişim</Link>
+                        <NavLink className="nav-link" to="/contact">İletişim</NavLink>
                     </li>
                 </ul>
             </div>
