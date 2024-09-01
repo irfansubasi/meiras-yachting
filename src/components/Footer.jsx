@@ -32,7 +32,18 @@ export default function Footer() {
                     </ul>
                 </div>
             </div>
-            <span className='copyright'>Copyright © {year} - All rights reserved | designed by <a target='_blank' rel="noopener noreferrer" href="https://www.instagram.com/meirasdesign/">Meiras Design</a> | developed by <a target='_blank' rel="noopener noreferrer" href="https://github.com/irfansubasi">irfansubasi</a></span>
+            <span className='copyright'>
+                <p className='text-center'>
+                    Copyright © {year} - All rights reserved
+                    <br />
+                    designed by <a target='_blank' rel="noopener noreferrer" href="https://www.instagram.com/meirasdesign/">
+                    Meiras Design</a>
+                    &nbsp;| developed by&nbsp; 
+                    <a target='_blank' rel="noopener noreferrer" href="https://github.com/irfansubasi">irfansubasi</a>
+                </p>           
+            </span>
         </footer>
     );
 }
+
+// site map ve keşfet kısmı sorun oluşturuyor

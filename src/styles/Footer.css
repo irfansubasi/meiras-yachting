@@ -2,7 +2,6 @@ footer{
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 0.9rem;
-    position: relative;
     background-color: #ffffff;
 }
 
@@ -43,12 +42,30 @@ footer{
     color: #092649;
     font-size: 0.8rem;
     margin-top: 1rem;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 .copyright a{
     text-decoration: underline;
+}
+
+@media screen and (max-width: 768px){
+    .brand-socials{
+        align-items: center;
+    }
+
+    .brand-socials img{
+        width: 8rem;
+    }
+
+    .brand-socials .socials{
+        align-items: center!important;
+    }
+
+    .site-map ul:nth-child(2){
+        margin-left: 0;
+    }
+
+    footer>div{
+        flex-direction: column;
+    }
 }
