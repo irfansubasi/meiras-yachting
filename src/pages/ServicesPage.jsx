@@ -1,5 +1,6 @@
 import Nav from "../components/Nav";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import '../styles/ServicesPage.css';
 
 export default function ServicesPage() {
@@ -119,10 +120,10 @@ export default function ServicesPage() {
                 </section>
                 <section className="services-exp">
                         <div className="row">
-                            <div className="col-9 exp-row-body">
+                            <div className="col-8 exp-row-body">
                                     <h3>Kumanya Hizmetleri</h3>
-                                    <div className="border"></div>
-                                    <p className="lead">
+                                    <div className="border my-5 w-25"></div>
+                                    <p>
                                         Yerel lezzetlerden dünya mutfaklarına kadar geniş bir ürün yelpazesi sunuyoruz.
                                         <br />
                                         <br />
@@ -132,11 +133,66 @@ export default function ServicesPage() {
                                         Yat kiralama hizmetlerimizde, her ayrıntının sizin için düşünüldüğünü bilmenin rahatlığıyla, sadece denizin ve tatilin keyfini çıkarın. Kumanya hizmetlerimizle ilgili daha fazla bilgi almak ve özel taleplerinizi iletmek için bizimle iletişime geçebilirsiniz.
                                     </p>
                             </div>
-                            <div className="col-3 exp-row-img">
+                            <div className="col-4 exp-row-img">
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="col-4 exp-row-img" style={{backgroundImage: "url('../assets/vip-service.png')"}}>
+                            </div>
+                            <div className="col-8 exp-row-body" style={{backgroundColor: "#ffffff", color:"#092649"}}>
+                                    <h3>VIP Transfer</h3>
+                                    <div className="border my-5 w-25" style={{borderColor: "#092649"}}></div>
+                                    <p>
+                                        Havaalanı veya şehirlerarası transfer ihtiyacınızda hizmetinizdeyiz.
+                                        <br />
+                                        <br />
+                                        VIP transfer hizmetimiz, özel karşılama ve uğurlama hizmetleriyle başlar.
+                                        <br />
+                                        <br />
+                                        Gizlilik ve güvenlik en ön planda tutulur.
+                                        <br />
+                                        <br />
+                                        VIP transfer hizmetimizle, yat kiralama deneyiminize prestij ve konfor katıyoruz. Ayrıcalıklı hizmetlerimizden faydalanmak ve daha fazla bilgi almak için bizimle iletişime geçebilirsiniz.
+                                    </p>
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="col-8 exp-row-body">
+                                    <h3>Teknik Servis</h3>
+                                    <div className="border my-5 w-25"></div>
+                                    <p>
+                                        Tatiliniz boyunca ortaya çıkabilecek teknik aksaklıklar için hızlı müdahale garantisi sunuyoruz.
+                                        <br />
+                                        <br />
+                                        Teknenizin kışlık bakımlarını deneyimli iş ortaklarımızla birlikte gidermekteyiz.
+                                        <br />
+                                        <br />
+                                        Yat kiralama hizmetlerimizde sunduğumuz teknik servis desteği ile her zaman yanınızdayız. Daha fazla bilgi almak ve taleplerinizi iletmek için bizimle iletişime geçebilirsiniz.
+                                    </p>
+                            </div>
+                            <div className="col-4 exp-row-img" style={{backgroundImage: "url('../assets/technical-service.png')"}}>
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="col-4 exp-row-img" style={{backgroundImage: "url('../assets/cloth-service.png')"}}>
+                            </div>
+                            <div className="col-8 exp-row-body" style={{backgroundColor: "#ffffff", color:"#092649"}}>
+                                    <h3>Çamaşır Hizmeti</h3>
+                                    <div className="border my-5 w-25" style={{borderColor: "#092649"}}></div>
+                                    <p>
+                                        Misafirlerimizin konforunu ön planda tutarak, yatlarımızda konakladığınız süre boyunca çamaşır hizmeti sunuyoruz.
+                                        <br />
+                                        <br />
+                                        Express ve kuru temizleme seçeneklerimizle, kıyafetleriniz her zaman temiz ve düzenli.
+                                        <br />
+                                        <br />
+                                        Tatilinizi keyifle geçirirken, çamaşır işlerinizle biz ilgilenelim.
+                                    </p>
                             </div>
                         </div>
                 </section>
             </main>
+            <Footer />
         </>
         
     );

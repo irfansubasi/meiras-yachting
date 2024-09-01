@@ -42,8 +42,16 @@
 }
 
 .exp-row-body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
     color: #ffffff;
     background-color: #092649;
+    min-height: 50vh;
+    padding: 7rem;
+}
+
+.exp-row-body h3{
+    font-family: 'Mavel Regular', sans-serif;
 }
 
 .exp-row-img{
