@@ -38,7 +38,7 @@ export default function Form() {
                                 <label htmlFor="message">Mesaj</label>
                             </div>
                         </div>
-                        <div className="col-auto">
+                        <div className="col-auto button-div">
                             <button type="submit" className="btn btn-primary">Gönder</button>
                         </div>
                     </div>

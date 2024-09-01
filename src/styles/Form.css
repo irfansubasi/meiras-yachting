@@ -28,3 +28,22 @@
     background-color: #F0F0F0;
     height: 6rem!important;
 }
+
+@media screen and (max-width: 768px){
+
+    .mini-contact{
+        padding: 3rem 1.5rem!important;
+    }
+
+    .contact-form form{
+        padding: 1rem!important;
+    }
+
+    .contact-form .row .button-div{
+        width: 100%!important;
+    }
+
+    .contact-form .row .button-div button{
+        width: 100%!important;
+    }
+}
