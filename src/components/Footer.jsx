@@ -22,12 +22,12 @@ export default function Footer() {
                 <div className="site-map d-flex">
                     <ul>
                         <li><a href="/">Anasayfa</a></li>
-                        <li><a href="/yachts">Hakkımızda</a></li>
-                        <li><a href="/about">Yat Kiralama</a></li>
+                        <li><a href="/about">Hakkımızda</a></li>
+                        <li><a href="/">Yat Kiralama</a></li>
                     </ul>
                     <ul>
-                        <li><a href="/contact">Hizmetlerimiz</a></li>
-                        <li><a href="/contact">Brokerage</a></li>
+                        <li><a href="/services">Hizmetlerimiz</a></li>
+                        <li><a href="/">Brokerage</a></li>
                         <li><a href="/contact">İletişim</a></li>
                     </ul>
                 </div>
