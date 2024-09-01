@@ -33,7 +33,7 @@ export default function Footer() {
                 </div>
             </div>
             <span className='copyright'>
-                <p className='text-center'>
+                <p className='text-center mt-4'>
                     Copyright © {year} - All rights reserved
                     <br />
                     designed by <a target='_blank' rel="noopener noreferrer" href="https://www.instagram.com/meirasdesign/">
