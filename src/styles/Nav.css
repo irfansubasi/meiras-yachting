@@ -68,6 +68,7 @@
 
 @media (max-width: 991px){
     .navbar .navbar-nav .nav-item{
+        padding: 1.5rem;
         border-bottom: 1px #092648 solid;
         border-right: none;
     }
