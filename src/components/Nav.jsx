@@ -12,7 +12,7 @@ export default function Nav() {
                 <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarContent">
-                <ul className="navbar-nav m-auto mb-2 mb-lg-0">
+                <ul className="navbar-nav">
                     <li className="nav-item">
                         <NavLink className="nav-link" to="/">Anasayfa</NavLink>
                     </li>
