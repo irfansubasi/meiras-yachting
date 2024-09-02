@@ -24,8 +24,33 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     color: #092648;
+    text-align: center;
 }
 
 .navbar .navbar-nav .nav-item:last-child{
     border-right: none;
+}
+.navbar-toggler{
+    border: none;
+}
+
+.navbar-toggler:focus, .navbar-toggler:active{
+    outline: none;
+    box-shadow: none;
+}
+.navbar-toggler-icon{
+    background-image: url(
+        "data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(9, 38, 72, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+@media (max-width: 768px){
+    .navbar .navbar-nav .nav-item{
+        border-bottom: 1px #092648 solid;
+        border-right: none;
+        padding: 1rem 0;
+    }
+
+    .navbar .navbar-nav .nav-item:last-child{
+        border-bottom: none;
+    }
 }
