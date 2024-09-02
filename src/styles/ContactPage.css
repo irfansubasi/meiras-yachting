@@ -1,4 +1,5 @@
 .main-contact{
+    width: 100%;
     background-image: url('../assets/contact-bg.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -11,4 +12,15 @@
     padding-right: 10rem;
     padding-bottom: 20rem;
     padding-left: 10rem;
+}
+
+@media screen and (max-width: 991px){
+
+    .main-contact{
+        min-height: unset;
+    }
+    .form-container{
+        padding-top: 10rem!important;
+        padding: 1rem;
+    }
 }

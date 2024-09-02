@@ -39,6 +39,14 @@
         padding: 0!important;
     }
 
+    .contact-form .form-head{
+        padding: 1rem!important;
+    }
+
+    .contact-form .form-body{
+        padding: 2rem!important;
+    }
+
     .contact-form .row .button-div{
         width: 100%!important;
     }
