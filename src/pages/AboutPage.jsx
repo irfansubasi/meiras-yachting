@@ -14,10 +14,10 @@ export default function About() {
             <Nav />
             <Header page="about"/>
             <main>
-                <section style={{height:"115vh"}}>
+                <section className="about-section" style={{height:"115vh"}}>
                     <div className="container about-us">
                         <div className="about-container">
-                            <div className="about-section">
+                            <div className="about-box">
                                 <img className="about-logo img-fluid" src={verticalLogo} alt="meiras" />
                                 <div className="m-auto explain d-flex flex-column align-items-center">
                                     <h3>Hakkımızda</h3>
@@ -37,7 +37,7 @@ export default function About() {
                                     </a>
                                     <a href="mailto:meirasyachting@gmail.com" target="_blank" rel="noreferrer">
                                         <FontAwesomeIcon size="2x" icon={faEnvelope} />
-                                        <span>+90 (544) 413 63 78</span>
+                                        <span>meirasyachting@gmail.com</span>
                                     </a>
                                 </div>
                             </div>
