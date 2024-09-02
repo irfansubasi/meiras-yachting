@@ -70,6 +70,14 @@
 
 @media screen and (max-width: 991px){
 
+    .slogan{
+        width: 70%!important;
+    }
+
+    .slogan h1{
+        font-size: 6vw!important;
+    }
+
     .info-col{
         background-color: #092648;
     }
