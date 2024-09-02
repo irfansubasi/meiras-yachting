@@ -3,6 +3,7 @@
 }
 
 .services-box{
+    width: 100%;
     font-weight: 400;
     color: #092649;
     display: flex;
@@ -13,6 +14,10 @@
     box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.2);
     padding: 2rem;
     
+}
+
+.services-exp .row{
+    margin-right: 0!important;
 }
 
 .service-box-head{
@@ -59,4 +64,58 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+@media screen and (max-width: 1400px){
+
+    .services{
+        height: 100%!important;
+    }
+     
+    .services .container{
+        position: unset!important;
+        transform: unset;
+    }
+
+}
+
+@media screen and (max-width: 1200px){
+    .services .services-boxes .services-box{
+        margin-bottom: 1rem!important;
+    }
+}
+
+@media screen and (max-width: 991px){
+    .services{
+        height: 100%!important;
+    }
+
+    .services .container{
+        position: unset!important;
+        transform: unset;
+    }
+
+    .services .services-boxes div{
+        margin: 0.5rem 0;
+    }
+
+    .services-boxes .services-box{
+        box-shadow: 0rem 0.1rem 0.8rem 0.1rem rgba(0, 0, 0, 0.2);
+    }
+
+    .exp-row-img{
+        height: 25rem;
+    }
+
+    .exp-row-body{
+        padding: 3rem;
+        font-size: 0.8rem;
+        height: 100%;
+        min-height: unset;
+    }
+
+    .exp-row-body .border{
+        margin: 1rem 0!important;
+        width: 100%!important;
+    }
 }
