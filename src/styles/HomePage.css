@@ -70,6 +70,10 @@
 
 @media screen and (max-width: 991px){
 
+    .discover .box{
+        padding: 5rem 1rem;
+    }
+
     .slogan{
         width: 70%!important;
     }
