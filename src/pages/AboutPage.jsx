@@ -26,19 +26,25 @@ export default function About() {
                             </div>
                             <div className="about-socials">
                                 <h4 className="border-bottom border-2">Bize Ulaşmak İçin</h4>
-                                <div className="social-box">
-                                    <a href="https://www.instagram.com/meirasyachting/" target="_blank" rel="noreferrer">
-                                        <FontAwesomeIcon size="2x" icon={faInstagram} />
-                                        <span>meirasyachting</span>
-                                    </a>
-                                    <a href="https://wa.me/+905444136378/" target="_blank" rel="noreferrer">
-                                        <FontAwesomeIcon size="2x" icon={faWhatsapp} />
-                                        <span>+90 (544) 413 63 78</span>
-                                    </a>
-                                    <a href="mailto:meirasyachting@gmail.com" target="_blank" rel="noreferrer">
-                                        <FontAwesomeIcon size="2x" icon={faEnvelope} />
-                                        <span>meirasyachting@gmail.com</span>
-                                    </a>
+                                <div className="social-box row">
+                                    <div className="col-lg-4 col-sm-12">
+                                        <a href="https://www.instagram.com/meirasyachting/" target="_blank" rel="noreferrer">
+                                            <FontAwesomeIcon size="2x" icon={faInstagram} />
+                                            <span>meirasyachting</span>
+                                        </a>
+                                    </div>
+                                    <div className="col-lg-4 col-sm-12">
+                                        <a href="https://wa.me/+905444136378/" target="_blank" rel="noreferrer">
+                                            <FontAwesomeIcon size="2x" icon={faWhatsapp} />
+                                            <span>+90 (544) 413 63 78</span>
+                                        </a>
+                                    </div>
+                                    <div className="col-lg-4 col-sm-12">
+                                        <a href="mailto:meirasyachting@gmail.com" target="_blank" rel="noreferrer">
+                                            <FontAwesomeIcon size="2x" icon={faEnvelope} />
+                                            <span>meirasyachting@gmail.com</span>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
