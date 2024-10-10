@@ -10,7 +10,7 @@ export default function RentPage() {
       <Header page="rent" />
       <main>
         <section className="rent-section">
-          <div className="categories p-5 bg-white position-absolute">
+          <div className="categories p-5 bg-white position-absolute shadow-sm">
             <Form>
               <div className="checkbox-group">
                 <Input type="checkbox" className="custom-checkbox" id="gulet" />
