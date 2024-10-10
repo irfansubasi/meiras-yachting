@@ -1,3 +1,7 @@
+:root {
+  --toastify-color-success: #092648;
+}
+
 @font-face {
   font-family: 'Montserrat';
   src: url('./fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
@@ -13,22 +17,22 @@
   src: url('./fonts/Mavel-Italic.otf') format('truetype');
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html{
+html {
   font-size: 16px;
 }
 
-body{
-  background-color: #F4F9FF;
+body {
+  background-color: #f4f9ff;
   font-family: 'Mavel Regular', sans-serif;
 }
 
-a{
+a {
   text-decoration: none;
   color: #000000;
 }

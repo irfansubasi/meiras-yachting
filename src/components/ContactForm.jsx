@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import '../styles/Form.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 export default function ContactForm() {
   const [formData, setFormData] = useState({
     user_name: '',
@@ -29,11 +31,14 @@ export default function ContactForm() {
       .then((response) => response.json())
       .then((data) => {
         if (data.message) {
-          alert('Email sent successfully!');
+          toast.success('Başarıyla Gönderildi !');
         }
       })
       .catch((error) => {
         console.error('Error:', error);
+        toast.error(
+          'Eksik veya yanlış bilgi girdiniz! Bilgilerinizi kontrol ediniz!'
+        );
       });
   };
 
@@ -124,6 +129,7 @@ export default function ContactForm() {
           </div>
         </form>
       </div>
+      <ToastContainer />
     </div>
   );
 }
