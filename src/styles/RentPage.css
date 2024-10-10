@@ -1,5 +1,62 @@
+.rent-section {
+  font-family: 'Montserrat', sans-serif;
+}
+
 .categories {
   transform: translate(-50%, -50%);
   top: 515px;
   left: 50%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+
+.categories form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 50px;
+}
+
+.custom-checkbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.custom-label {
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  font-size: 16px;
+  user-select: none;
+  display: inline-block;
+}
+
+.custom-label::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #092648;
+  background-color: white;
+}
+
+.custom-checkbox:checked + .custom-label::before {
+  background-color: #092648;
+}
+
+.custom-label::after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 6px;
+  width: 8px;
+  height: 14px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  opacity: 0;
 }
