@@ -2,6 +2,8 @@ import express from 'express';
 import nodemailer from 'nodemailer';
 import dotenv from 'dotenv';
 import cors from 'cors';
+import mongoose from 'mongoose';
+import Yacht from './models/yacht.js';
 
 dotenv.config();
 
@@ -12,6 +14,70 @@ app.use(cors());
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+mongoose
+  .connect(process.env.MONGO_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => console.log('MongoDB bağlantısı başarılı!'))
+  .catch((err) => console.log('MongoDB bağlantısı başarısız:', err));
+
+app.post('/yachts', async (req, res) => {
+  const { name, type, length, people, cabin, location, features } = req.body;
+
+  const yeniYat = new Yacht({
+    name,
+    type,
+    length,
+    people,
+    cabin,
+    location,
+    features,
+  });
+
+  try {
+    const yatVerisi = new Yacht(req.body);
+    await yatVerisi.save();
+    res
+      .status(201)
+      .json({ message: 'Yat başarıyla kaydedildi!', yat: yatVerisi });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({
+      error: 'Yat kaydetme işlemi başarısız oldu.',
+      details: error.message,
+    });
+  }
+});
+
+app.get('/yachts', async (req, res) => {
+  try {
+    const yatlar = await Yacht.find();
+    res.status(200).json(yatlar);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Yatları alma işlemi başarısız oldu.' });
+  }
+});
+
+app.put('/yachts/:id', async (req, res) => {
+  const { id } = req.params; // URL'den gelen ID
+  const updatedData = req.body; // Güncellenmiş veri
+
+  try {
+    const updatedYat = await Yacht.findByIdAndUpdate(id, updatedData, {
+      new: true,
+    }); // Veriyi güncelle
+    if (!updatedYat) {
+      return res.status(404).json({ error: 'Yat bulunamadı.' }); // Yat bulunamazsa hata döndür
+    }
+    res.status(200).json(updatedYat); // Güncellenmiş yatı döndür
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Yat güncelleme işlemi başarısız oldu.' });
+  }
+});
 
 app.post('/send-email', (req, res) => {
   const { user_name, user_email, user_phone, user_location, user_message } =
