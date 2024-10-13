@@ -85,7 +85,15 @@ export default function RentPage() {
                 </Form>
               </div>
               {yachts.map((element, index) => (
-                <RentCard key={index} elementID={element._id} />
+                <RentCard
+                  key={index}
+                  elementID={element._id}
+                  name={element.name}
+                  type={element.type}
+                  length={element.length}
+                  people={element.people}
+                  cabin={element.cabin}
+                />
               ))}
             </section>
           </main>
