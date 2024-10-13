@@ -4,7 +4,7 @@ export default function RentCard(props) {
   return (
     <Card
       style={{
-        width: '20rem',
+        width: '100%',
       }}
     >
       <div className="card-img">

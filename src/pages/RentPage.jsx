@@ -38,7 +38,7 @@ export default function RentPage() {
           <Nav />
           <Header page="rent" />
           <main>
-            <section className="rent-section">
+            <section className="rent-section container">
               <div className="categories p-5 bg-white position-absolute shadow-sm">
                 <Form>
                   <div className="checkbox-group">
@@ -84,17 +84,22 @@ export default function RentPage() {
                   <Button className="btn btn-primary">Tümünü Gör</Button>
                 </Form>
               </div>
-              {yachts.map((element, index) => (
-                <RentCard
-                  key={index}
-                  elementID={element._id}
-                  name={element.name}
-                  type={element.type}
-                  length={element.length}
-                  people={element.people}
-                  cabin={element.cabin}
-                />
-              ))}
+              <section className="catalog-section">
+                <div className="row">
+                  {yachts.map((element, index) => (
+                    <div className="col-xl-3 col-md-6 mb-4" key={index}>
+                      <RentCard
+                        elementID={element._id}
+                        name={element.name}
+                        type={element.type}
+                        length={element.length}
+                        people={element.people}
+                        cabin={element.cabin}
+                      />
+                    </div>
+                  ))}
+                </div>
+              </section>
             </section>
           </main>
         </>
