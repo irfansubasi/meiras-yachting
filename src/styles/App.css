@@ -17,3 +17,21 @@
     transform: rotate(360deg);
   }
 }
+
+@media (max-width: 1400px) {
+  html {
+    font-size: 14px !important;
+  }
+}
+
+@media (max-width: 1400px) {
+  html {
+    font-size: 14px !important;
+  }
+}
+
+@media (max-width: 647px) {
+  html {
+    font-size: 12px !important;
+  }
+}

@@ -9,6 +9,14 @@ import { useLoading } from '../contexts/LoadingContext';
 
 export default function RentPage() {
   const [yachts, setYachts] = useState([]);
+
+  const [selectedTypes, setSelectedTypes] = useState({
+    gulet: false,
+    motoryat: false,
+    katamaran: false,
+    yelkenli: false,
+  });
+
   const { loading, setLoading } = useLoading();
 
   useEffect(() => {
@@ -26,6 +34,29 @@ export default function RentPage() {
 
     fetchYachts();
   }, [setLoading]);
+
+  const handleCheckboxChange = (event) => {
+    const { id, checked } = event.target;
+    setSelectedTypes((prev) => ({
+      ...prev,
+      [id]: checked,
+    }));
+  };
+
+  const filteredYachts = yachts.filter((yacht) => {
+    if (Object.values(selectedTypes).every((value) => !value)) {
+      return true;
+    }
+    return selectedTypes[yacht.type];
+  });
+  const handleShowAll = () => {
+    setSelectedTypes({
+      gulet: true,
+      motoryat: true,
+      katamaran: true,
+      yelkenli: true,
+    });
+  };
 
   return (
     <>
@@ -47,6 +78,8 @@ export default function RentPage() {
                       type="checkbox"
                       className="custom-checkbox"
                       id="gulet"
+                      checked={selectedTypes.gulet}
+                      onChange={handleCheckboxChange}
                     />
                     <Label check className="custom-label" htmlFor="gulet">
                       Gulet
@@ -57,6 +90,8 @@ export default function RentPage() {
                       type="checkbox"
                       className="custom-checkbox"
                       id="motoryat"
+                      checked={selectedTypes.motoryat}
+                      onChange={handleCheckboxChange}
                     />
                     <Label className="custom-label" htmlFor="motoryat" check>
                       Motoryat
@@ -67,6 +102,8 @@ export default function RentPage() {
                       className="custom-checkbox"
                       id="katamaran"
                       type="checkbox"
+                      checked={selectedTypes.katamaran}
+                      onChange={handleCheckboxChange}
                     />
                     <Label className="custom-label" htmlFor="katamaran" check>
                       Katamaran
@@ -77,17 +114,24 @@ export default function RentPage() {
                       className="custom-checkbox"
                       id="yelkenli"
                       type="checkbox"
+                      checked={selectedTypes.yelkenli}
+                      onChange={handleCheckboxChange}
                     />
                     <Label className="custom-label" htmlFor="yelkenli" check>
                       Yelkenli
                     </Label>
                   </div>
-                  <Button className="btn btn-primary">Tümünü Gör</Button>
+                  <Button
+                    className="btn btn-primary see-all"
+                    onClick={handleShowAll}
+                  >
+                    Tümünü Gör
+                  </Button>
                 </Form>
               </div>
               <section className="catalog-section">
                 <div className="row">
-                  {yachts.map((element, index) => (
+                  {filteredYachts.map((element, index) => (
                     <div className="col-xl-3 col-md-6 mb-4" key={index}>
                       <RentCard
                         elementID={element._id}

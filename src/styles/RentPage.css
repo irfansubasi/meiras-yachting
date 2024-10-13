@@ -12,10 +12,11 @@
 }
 
 .categories form {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  column-gap: 90px;
+  justify-content: space-evenly;
 }
 
 .custom-checkbox {
@@ -73,4 +74,46 @@
 
 .catalog-section {
   margin-top: 10rem;
+}
+
+@media (max-width: 991px) {
+  .categories form {
+    column-gap: 5px;
+    row-gap: 20px;
+  }
+
+  .see-all {
+    width: 100%;
+  }
+}
+
+@media (max-width: 647px) {
+  .categories form {
+    width: unset;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .checkbox-group {
+    flex: 1 1 calc(50% - 5px);
+  }
+}
+
+@media (max-width: 440px) {
+  .categories {
+    padding: 1.2rem !important;
+    top: 460px;
+  }
+
+  .categories label {
+    font-size: 1rem !important;
+  }
+
+  .categories form {
+    flex-direction: column;
+  }
+
+  .checkbox-group {
+    flex: unset;
+  }
 }
