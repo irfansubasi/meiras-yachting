@@ -101,19 +101,31 @@
 
 @media (max-width: 440px) {
   .categories {
+    margin: 2rem 0;
+    position: unset !important;
+    transform: none;
+    width: 100%;
     padding: 1.2rem !important;
-    top: 460px;
   }
 
   .categories label {
     font-size: 1rem !important;
   }
 
-  .categories form {
-    flex-direction: column;
+  .catalog-section {
+    margin-top: 0;
   }
 
   .checkbox-group {
     flex: unset;
+  }
+
+  .custom-label {
+    padding-left: 25px;
+  }
+
+  .custom-label::before {
+    width: 15px;
+    height: 15px;
   }
 }

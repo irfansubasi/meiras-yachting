@@ -129,22 +129,22 @@ export default function RentPage() {
                   </Button>
                 </Form>
               </div>
-              <section className="catalog-section">
-                <div className="row">
-                  {filteredYachts.map((element, index) => (
-                    <div className="col-xl-3 col-md-6 mb-4" key={index}>
-                      <RentCard
-                        elementID={element._id}
-                        name={element.name}
-                        type={element.type}
-                        length={element.length}
-                        people={element.people}
-                        cabin={element.cabin}
-                      />
-                    </div>
-                  ))}
-                </div>
-              </section>
+            </section>
+            <section className="catalog-section container">
+              <div className="row">
+                {filteredYachts.map((element, index) => (
+                  <div className="col-xl-3 col-md-6 mb-4" key={index}>
+                    <RentCard
+                      elementID={element._id}
+                      name={element.name}
+                      type={element.type}
+                      length={element.length}
+                      people={element.people}
+                      cabin={element.cabin}
+                    />
+                  </div>
+                ))}
+              </div>
             </section>
           </main>
           <Footer />
