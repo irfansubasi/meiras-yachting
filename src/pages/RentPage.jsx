@@ -1,6 +1,7 @@
 import { Form, Input, Label, Button } from 'reactstrap';
 import Header from '../components/Header';
 import Nav from '../components/Nav';
+import Footer from '../components/Footer';
 import '../styles/RentPage.css';
 import { useEffect, useState } from 'react';
 import RentCard from '../components/RentCard';
@@ -102,6 +103,7 @@ export default function RentPage() {
               </section>
             </section>
           </main>
+          <Footer />
         </>
       )}
     </>
