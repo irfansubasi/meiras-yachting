@@ -8,6 +8,7 @@ import ServicesPage from './pages/ServicesPage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import RentPage from './pages/RentPage';
 import { LoadingProvider } from './contexts/LoadingContext';
+import DetailsPage from './pages/DetailsPage';
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/rent" element={<RentPage />} />
+          <Route path="/rent/:id" element={<DetailsPage />} />
         </Routes>
       </Router>
     </LoadingProvider>

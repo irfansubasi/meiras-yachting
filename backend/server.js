@@ -4,11 +4,17 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import mongoose from 'mongoose';
 import Yacht from './models/yacht.js';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
 dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 app.use(cors());
 
@@ -110,6 +116,30 @@ app.post('/send-email', (req, res) => {
     } else {
       return res.status(200).json({ message: 'Email sent successfully!' });
     }
+  });
+});
+
+app.get('/api/yacht-images/:id', (req, res) => {
+  const yachtId = req.params.id;
+  const imageDirectory = path.join(
+    __dirname,
+    '..',
+    'public',
+    'assets',
+    'yachtspics',
+    yachtId
+  );
+
+  fs.readdir(imageDirectory, (err, files) => {
+    if (err) {
+      return res
+        .status(500)
+        .json({ error: 'Directory not found or an error occurred.' });
+    }
+
+    // Resim dosyalarının tam yolunu oluştur
+    const images = files.map((file) => `/assets/yachtspics/${yachtId}/${file}`);
+    res.json({ images });
   });
 });
 

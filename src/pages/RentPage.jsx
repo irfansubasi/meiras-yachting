@@ -141,6 +141,7 @@ export default function RentPage() {
                       length={element.length}
                       people={element.people}
                       cabin={element.cabin}
+                      currentYacht={element}
                     />
                   </div>
                 ))}

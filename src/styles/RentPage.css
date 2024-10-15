@@ -77,6 +77,15 @@
   margin-top: 10rem;
 }
 
+.card {
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
 @media (max-width: 991px) {
   .categories form {
     column-gap: 5px;

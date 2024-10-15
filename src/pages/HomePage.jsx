@@ -4,6 +4,7 @@ import Form from '../components/ContactForm';
 import Nav from '../components/Nav';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { Link } from 'react-router-dom';
 
 export default function HomePage() {
   return (
@@ -59,7 +60,9 @@ export default function HomePage() {
                 <br />
                 Yatlarımızı Keşfedin
               </p>
-              <button className="btn btn-primary">Keşfet</button>
+              <Link to="/rent" className="btn btn-primary">
+                Keşfet
+              </Link>
             </div>
           </div>
         </section>
