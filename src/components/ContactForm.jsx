@@ -21,13 +21,16 @@ export default function ContactForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    fetch('http://localhost:5000/send-email', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(formData),
-    })
+    fetch(
+      'https://meirasyachting-backend-production.up.railway.app/send-email',
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      }
+    )
       .then((response) => response.json())
       .then((data) => {
         if (data.message) {
@@ -43,12 +46,12 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="contact-form">
-      <div className="form-head p-5">
-        <h3>BİLGİ AL</h3>
+    <div className="contact-form p-5 w-75">
+      <div className="form-head d-flex align-items-center justify-content-center">
+        <h4>BİLGİ AL</h4>
       </div>
       <div className="form-body bg-white p-5 w-100">
-        <form onSubmit={handleSubmit} className="p-5">
+        <form onSubmit={handleSubmit} className="p-3">
           <div className="row">
             <div className="col-md-6 mb-4">
               <div className="form-floating">

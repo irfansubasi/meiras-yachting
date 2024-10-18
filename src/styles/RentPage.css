@@ -69,7 +69,7 @@
 }
 
 .card-text {
-  font-size: 0.8rem !important;
+  font-size: 0.6rem !important;
 }
 
 .catalog-section {
@@ -87,6 +87,10 @@
 }
 
 @media (max-width: 991px) {
+  .card:hover {
+    transform: none;
+  }
+
   .categories form {
     column-gap: 5px;
     row-gap: 20px;
@@ -101,7 +105,6 @@
   .categories form {
     width: unset;
     align-items: flex-start;
-    gap: 5px;
   }
 
   .checkbox-group {

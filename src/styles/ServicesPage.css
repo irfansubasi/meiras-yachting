@@ -1,121 +1,118 @@
-.services-boxes{
-    padding: 1rem;
+.services-boxes {
+  padding: 1rem;
 }
 
-.services-box{
-    width: 100%;
-    font-weight: 400;
-    color: #092649;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    background-color: #ffffff;
-    box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.2);
-    padding: 2rem;
-    
+.services-box {
+  width: 100%;
+  font-weight: 400;
+  color: #092649;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #ffffff;
+  box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.2);
+  padding: 2rem;
 }
 
-.services-exp .row{
-    margin-right: 0!important;
+.services-exp .row {
+  margin-right: 0 !important;
 }
 
-.service-box-head{
-    font-size: 1.2rem;
-    margin: 0;
+.service-box-head {
+  font-size: 1.2rem;
+  margin: 0;
 }
 
-.services-boxes .border{
-    border-color: #092649!important;
+.services-boxes .border {
+  border-color: #092649 !important;
 }
 
-.service-box-body{
-    font-family: 'Monsterrat', sans-serif;
-    margin: 0;
+.service-box-body {
+  font-family: 'Monsterrat', sans-serif;
+  margin: 0;
 }
 
-.services-box svg{
-    width: 3rem;
-    height: 3rem;
-    margin: 1rem 0;
+.services-svg {
+  width: 3rem;
+  height: 3rem;
+  margin: 1rem 0;
 }
 
-.services .position-absolute{
-    transform: translate(-50%, -50%);
-    top: 67%;
-    left: 50%;
+.services .position-absolute {
+  transform: translate(-50%, -50%);
+  top: 67%;
+  left: 50%;
 }
 
-.exp-row-body{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
-    color: #ffffff;
-    background-color: #092649;
-    min-height: 50vh;
-    padding: 7rem;
+.exp-row-body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #092649;
+  min-height: 50vh;
+  padding: 7rem;
 }
 
-.exp-row-body h3{
-    font-family: 'Mavel Regular', sans-serif;
+.exp-row-body h3 {
+  font-family: 'Mavel Regular', sans-serif;
 }
 
-.exp-row-img{
-    background-image: url('../assets/food-service.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+.exp-row-img {
+  background-image: url('../assets/food-service.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-@media screen and (max-width: 1400px){
+@media screen and (max-width: 1400px) {
+  .services {
+    height: 100% !important;
+  }
 
-    .services{
-        height: 100%!important;
-    }
-     
-    .services .container{
-        position: unset!important;
-        transform: unset;
-    }
-
+  .services .container {
+    position: unset !important;
+    transform: unset;
+  }
 }
 
-@media screen and (max-width: 1200px){
-    .services .services-boxes .services-box{
-        margin-bottom: 1rem!important;
-    }
+@media screen and (max-width: 1200px) {
+  .services .services-boxes .services-box {
+    margin-bottom: 1rem !important;
+  }
 }
 
-@media screen and (max-width: 991px){
-    .services{
-        height: 100%!important;
-    }
+@media screen and (max-width: 991px) {
+  .services {
+    height: 100% !important;
+  }
 
-    .services .container{
-        position: unset!important;
-        transform: unset;
-    }
+  .services .container {
+    position: unset !important;
+    transform: unset;
+  }
 
-    .services .services-boxes div{
-        margin: 0.5rem 0;
-    }
+  .services .services-boxes div {
+    margin: 0.5rem 0;
+  }
 
-    .services-boxes .services-box{
-        box-shadow: 0rem 0.1rem 0.8rem 0.1rem rgba(0, 0, 0, 0.2);
-    }
+  .services-boxes .services-box {
+    box-shadow: 0rem 0.1rem 0.8rem 0.1rem rgba(0, 0, 0, 0.2);
+  }
 
-    .exp-row-img{
-        height: 25rem;
-    }
+  .exp-row-img {
+    height: 25rem;
+  }
 
-    .exp-row-body{
-        padding: 3rem;
-        font-size: 0.8rem;
-        height: 100%;
-        min-height: unset;
-    }
+  .exp-row-body {
+    padding: 3rem;
+    font-size: 0.8rem;
+    height: 100%;
+    min-height: unset;
+  }
 
-    .exp-row-body .border{
-        margin: 1rem 0!important;
-        width: 100%!important;
-    }
+  .exp-row-body .border {
+    margin: 1rem 0 !important;
+    width: 100% !important;
+  }
 }

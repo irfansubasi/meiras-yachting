@@ -5,7 +5,6 @@ import ContactForm from '../components/ContactForm';
 import { useLocation } from 'react-router-dom';
 import { useEffect, useRef, useState } from 'react';
 import { Carousel, CarouselControl, CarouselItem } from 'reactstrap';
-import axios from 'axios';
 
 export default function DetailsPage() {
   const location = useLocation();
@@ -20,29 +19,26 @@ export default function DetailsPage() {
   const manualScroll = useRef(false);
 
   useEffect(() => {
-    // Yatın ID'sine göre resimleri backend'den çek
-    axios
-      .get(`http://localhost:5000/api/yacht-images/${currentYacht._id}`)
-      .then((response) => {
-        setImages(response.data.images);
-      })
-      .catch((error) => {
-        console.error('Error fetching yacht images:', error);
-      });
-  }, [currentYacht._id]);
+    const imageCount = currentYacht.images; // Max resim sayısı
+    const imagePaths = [];
+    for (let i = 1; i <= imageCount; i++) {
+      imagePaths.push(`/assets/yachtspics/${currentYacht._id}/${i}.webp`);
+    }
+    setImages(imagePaths);
+  }, [currentYacht._id, currentYacht.images]);
 
   useEffect(() => {
-    // Sadece manualScroll true olduğunda çalışacak
     if (manualScroll.current && thumbnailRef.current) {
       const activeThumbnail = thumbnailRef.current.children[activeIndex];
       if (activeThumbnail) {
         activeThumbnail.scrollIntoView({
           behavior: 'smooth',
-          inline: 'center', // Ortada konumlandır
+          inline: 'center',
+          block: 'nearest',
         });
       }
     }
-    // Kaydırma tamamlandıktan sonra manualScroll'u sıfırlıyoruz
+
     manualScroll.current = false;
   }, [activeIndex]);
 
@@ -60,7 +56,7 @@ export default function DetailsPage() {
 
   const goToIndex = (newIndex) => {
     if (animating) return;
-    manualScroll.current = true; // Sadece kullanıcı tıklamasıyla değiştiğinde true yapıyoruz
+    manualScroll.current = true;
     setActiveIndex(newIndex);
   };
   const slides = images.map((src, index) => (
@@ -78,7 +74,9 @@ export default function DetailsPage() {
       <Nav />
       <main>
         <section className="details-section container">
-          <h1>{currentYacht.name.toUpperCase()}</h1>
+          <h4 className="fw-semibold mb-4">
+            {currentYacht.name.toUpperCase()}
+          </h4>
           <div className="row">
             <div className="carousel-container col-md-12 col-lg-6">
               <Carousel
@@ -115,26 +113,28 @@ export default function DetailsPage() {
                 </div>
               </div>
             </div>
-            <div className="yacht-details col-lg-6 col-md-12 d-flex flex-column">
+            <div className="yacht-details col-lg-6 col-md-12">
               <div className="headings d-flex align-items-center justify-content-around">
                 <div className="heading-item">
                   <img src="../../assets/length.svg" alt="length" />
-                  <span className="fs-5">{currentYacht.length} M</span>
+                  <span className="item-text">{currentYacht.length} M</span>
                 </div>
 
                 <div className="vertical-divider"></div>
                 <div className="heading-item">
                   <img src="../../assets/people.svg" alt="people" />
-                  <span className="fs-5">{currentYacht.people} MİSAFİR</span>
+                  <span className="item-text">
+                    {currentYacht.people} MİSAFİR
+                  </span>
                 </div>
 
                 <div className="vertical-divider"></div>
                 <div className="heading-item">
                   <img src="../../assets/cabin.svg" alt="cabin" />
-                  <span className="fs-5">{currentYacht.cabin} KABİN</span>
+                  <span className="item-text">{currentYacht.cabin} KABİN</span>
                 </div>
               </div>
-              <div className="features d-flex justify-content-center">
+              <div className="features d-flex justify-content-center align-items-center">
                 <ul className="features-list">
                   {currentYacht.features.map((feat, index) => (
                     <li className="features-list-item" key={index}>
@@ -142,18 +142,6 @@ export default function DetailsPage() {
                     </li>
                   ))}
                 </ul>
-              </div>
-              <div className="extra-info d-flex justify-content-center column-gap-5">
-                <div className="info-item">
-                  <img src="../../assets/type.svg" alt="type" />
-                  <div className="info-divider"></div>
-                  <p>{currentYacht.type.toUpperCase()}</p>
-                </div>
-                <div className="info-item">
-                  <img src="../../assets/location.svg" alt="location" />
-                  <div className="info-divider"></div>
-                  <p>{currentYacht.location.toUpperCase()}</p>
-                </div>
               </div>
             </div>
           </div>
@@ -164,7 +152,7 @@ export default function DetailsPage() {
             src="../../assets/footer-logo.png"
             alt="logo"
           />
-          <div className="form-div">
+          <div className="form-div d-flex justify-content-center">
             <ContactForm />
           </div>
         </section>

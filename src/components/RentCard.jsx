@@ -12,17 +12,17 @@ export default function RentCard(props) {
         <div className="card-img">
           <img
             className="img-fluid coverImg"
-            src={`../../assets/yachtspics/${elementID}/cover.png`}
+            src={`../../assets/yachtspics/${elementID}/cover.webp`}
           />
         </div>
 
         <CardBody className="text-white" style={{ backgroundColor: '#092649' }}>
-          <CardTitle className="fw-semibold fs-6 text-center" tag="h5">
+          <CardTitle className="fw-medium text-center" tag="h6">
             {name.toUpperCase()}
           </CardTitle>
           <CardText className="d-flex justify-content-evenly">
             <span>{type.toUpperCase()}</span>|<span>{length}M</span>|
-            <span>{people} GUESTS</span>|<span>{cabin} CABINS</span>
+            <span>{people} MİSAFİR</span>|<span>{cabin} KABİN</span>
           </CardText>
         </CardBody>
       </Link>

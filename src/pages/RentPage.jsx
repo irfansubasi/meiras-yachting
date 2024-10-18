@@ -17,13 +17,15 @@ export default function RentPage() {
     yelkenli: false,
   });
 
+  const backendURL = 'https://meirasyachting-backend-production.up.railway.app';
+
   const { loading, setLoading } = useLoading();
 
   useEffect(() => {
     const fetchYachts = async () => {
       setLoading(true);
       try {
-        const response = await fetch('http://localhost:5000/yachts');
+        const response = await fetch(`${backendURL}/yachts`);
         const data = await response.json();
         setYachts(data);
         setLoading(false);
@@ -43,12 +45,15 @@ export default function RentPage() {
     }));
   };
 
-  const filteredYachts = yachts.filter((yacht) => {
-    if (Object.values(selectedTypes).every((value) => !value)) {
-      return true;
-    }
-    return selectedTypes[yacht.type];
-  });
+  const filteredYachts = yachts
+    .filter((yacht) => {
+      if (Object.values(selectedTypes).every((value) => !value)) {
+        return true;
+      }
+      return selectedTypes[yacht.type];
+    })
+    .sort((a, b) => b.length - a.length); // Büyükten küçüğe sıralama
+
   const handleShowAll = () => {
     setSelectedTypes({
       gulet: true,

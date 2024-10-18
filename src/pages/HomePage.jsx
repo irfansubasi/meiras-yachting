@@ -1,6 +1,6 @@
 import '../styles/HomePage.css';
 import '../styles/Buttons.css';
-import Form from '../components/ContactForm';
+import ContactForm from '../components/ContactForm';
 import Nav from '../components/Nav';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -288,14 +288,14 @@ export default function HomePage() {
                   </svg>
                 </div>
                 <p>Lokasyon Seçenekleri</p>
-                <span>Marmaris, Bodrum, Göcek</span>
+                <span>Marmaris, Bodrum, Göcek, Fethiye</span>
               </div>
             </div>
           </div>
         </section>
         <section className="mini-contact p-5">
-          <div className="container">
-            <Form />
+          <div className="container d-flex justify-content-center">
+            <ContactForm />
           </div>
         </section>
       </main>

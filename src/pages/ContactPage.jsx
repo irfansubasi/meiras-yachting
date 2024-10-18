@@ -10,7 +10,7 @@ export default function ContactPage() {
       <main>
         <section className="main-contact">
           <div className="container">
-            <div className="form-container">
+            <div className="form-container d-flex justify-content-center">
               <ContactForm />
             </div>
           </div>

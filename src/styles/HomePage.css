@@ -1,92 +1,91 @@
-.discover{
-    background-image: url('../assets/discover-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+.discover {
+  background-image: url('../assets/discover-bg.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-.discover .box{
-    padding: 5rem 2rem;
-    width: 25rem;
-    height: 25rem;
+.discover .box {
+  padding: 5rem 2rem;
+  width: 25rem;
+  height: 25rem;
 }
 
-.info-col{
-    background-color: #F4F9FF;
+.info-col {
+  background-color: #f4f9ff;
 }
 
-.info-col .row{
+.info-col .row {
+  background-color: #092648;
+}
+
+.info-col .info-col-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+.info-col .col p {
+  margin: 0;
+}
+
+.info-col .col span {
+  font-weight: 300;
+}
+
+.mini-contact {
+  background-image: url('../assets/mini-contact.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #092648;
+}
+
+.social-col a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #092648;
+}
+
+.social-col a p {
+  margin-top: 0.5rem;
+}
+
+.yacht-svg {
+  width: 8rem;
+  height: auto;
+}
+
+.info-svg {
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 991px) {
+  .discover .box {
+    padding: 5rem 1rem;
+  }
+
+  .slogan {
+    width: 70% !important;
+  }
+
+  .slogan h1 {
+    font-size: 6vw !important;
+  }
+
+  .info-col {
     background-color: #092648;
-}
+  }
 
-.info-col .info-col-box{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-}
-
-.info-col .col p{
-    margin: 0;
-}
-
-.info-col .col span{
-    font-weight: 300;
-}
-
-.mini-contact{
-    background-image: url('../assets/mini-contact.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #092648;
-}
-
-.social-col a{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #092648;
-}
-
-.social-col a p{
-    margin-top: 0.5rem;
-}
-
-.yacht-svg{
-    width: 8rem;
-    height: auto;
-}
-
-.info-svg{
-    width: 3rem;
-    height: 3rem;
-    margin-bottom: 2rem;
-}
-
-@media screen and (max-width: 991px){
-
-    .discover .box{
-        padding: 5rem 1rem;
-    }
-
-    .slogan{
-        width: 70%!important;
-    }
-
-    .slogan h1{
-        font-size: 6vw!important;
-    }
-
-    .info-col{
-        background-color: #092648;
-    }
-
-    .info-col .row{
-        margin: 0!important;
-    }
+  .info-col .row {
+    margin: 0 !important;
+  }
 }

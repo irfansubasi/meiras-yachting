@@ -12,6 +12,33 @@
   animation: spin 2s linear infinite;
 }
 
+.btn:hover {
+  opacity: 0.8;
+}
+
+/* Scroll bar genişliği */
+body {
+  scrollbar-width: normal;
+  scrollbar-color: #092649 #f1f1f1;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #092649;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
 @keyframes spin {
   100% {
     transform: rotate(360deg);
