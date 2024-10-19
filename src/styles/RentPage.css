@@ -142,3 +142,9 @@
     height: 15px;
   }
 }
+
+@media (max-height: 800px) {
+  .categories {
+    top: 320px;
+  }
+}
