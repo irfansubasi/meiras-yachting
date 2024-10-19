@@ -2,7 +2,10 @@ import { useState } from 'react';
 import '../styles/Form.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useTranslation } from 'react-i18next';
 export default function ContactForm() {
+  const { t } = useTranslation();
+
   const [formData, setFormData] = useState({
     user_name: '',
     user_phone: '',
@@ -34,21 +37,19 @@ export default function ContactForm() {
       .then((response) => response.json())
       .then((data) => {
         if (data.message) {
-          toast.success('Başarıyla Gönderildi !');
+          toast.success(t('form.success'));
         }
       })
       .catch((error) => {
         console.error('Error:', error);
-        toast.error(
-          'Eksik veya yanlış bilgi girdiniz! Bilgilerinizi kontrol ediniz!'
-        );
+        toast.error(t('form.error'));
       });
   };
 
   return (
     <div className="contact-form p-5 w-75">
       <div className="form-head d-flex align-items-center justify-content-center">
-        <h4>BİLGİ AL</h4>
+        <h4>{t('form.heading')}</h4>
       </div>
       <div className="form-body bg-white p-5 w-100">
         <form onSubmit={handleSubmit} className="p-3">
@@ -65,7 +66,7 @@ export default function ContactForm() {
                   onChange={handleChange}
                 />
                 <label htmlFor="nameandsurname" className="form-label">
-                  Ad Soyad
+                  {t('form.name')}
                 </label>
               </div>
             </div>
@@ -80,7 +81,7 @@ export default function ContactForm() {
                   onChange={handleChange}
                   required
                 />
-                <label htmlFor="phone">Cep Telefonu</label>
+                <label htmlFor="phone">{t('form.phone')}</label>
               </div>
             </div>
             <div className="col-md-6 mb-4">
@@ -94,7 +95,7 @@ export default function ContactForm() {
                   onChange={handleChange}
                   required
                 />
-                <label htmlFor="mail">E-mail</label>
+                <label htmlFor="mail">{t('form.email')}</label>
               </div>
             </div>
             <div className="col-md-6 mb-4">
@@ -108,7 +109,7 @@ export default function ContactForm() {
                   onChange={handleChange}
                   required
                 />
-                <label htmlFor="city">Şehir</label>
+                <label htmlFor="city">{t('form.city')}</label>
               </div>
             </div>
             <div className="col-md-12 mb-4">
@@ -121,12 +122,12 @@ export default function ContactForm() {
                   onChange={handleChange}
                   required
                 ></textarea>
-                <label htmlFor="message">Mesaj</label>
+                <label htmlFor="message">{t('form.message')}</label>
               </div>
             </div>
             <div className="col-auto button-div">
               <button type="submit" value="Send" className="btn btn-primary">
-                Gönder
+                {t('form.button')}
               </button>
             </div>
           </div>

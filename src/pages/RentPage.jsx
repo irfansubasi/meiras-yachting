@@ -1,13 +1,13 @@
 import { Form, Input, Label, Button } from 'reactstrap';
 import Header from '../components/Header';
-import Nav from '../components/Nav';
-import Footer from '../components/Footer';
 import '../styles/RentPage.css';
 import { useEffect, useState } from 'react';
 import RentCard from '../components/RentCard';
 import { useLoading } from '../contexts/LoadingContext';
+import { useTranslation } from 'react-i18next';
 
 export default function RentPage() {
+  const { t, i18n } = useTranslation();
   const [yachts, setYachts] = useState([]);
 
   const [selectedTypes, setSelectedTypes] = useState({
@@ -25,7 +25,7 @@ export default function RentPage() {
     const fetchYachts = async () => {
       setLoading(true);
       try {
-        const response = await fetch(`${backendURL}/yachts`);
+        const response = await fetch(`${backendURL}/yachts/`);
         const data = await response.json();
         setYachts(data);
         setLoading(false);
@@ -50,9 +50,9 @@ export default function RentPage() {
       if (Object.values(selectedTypes).every((value) => !value)) {
         return true;
       }
-      return selectedTypes[yacht.type];
+      return selectedTypes[yacht.type.tr];
     })
-    .sort((a, b) => b.length - a.length); // Büyükten küçüğe sıralama
+    .sort((a, b) => b.length - a.length);
 
   const handleShowAll = () => {
     setSelectedTypes({
@@ -72,7 +72,6 @@ export default function RentPage() {
       )}
       {!loading && (
         <>
-          <Nav />
           <Header page="rent" />
           <main>
             <section className="rent-section container">
@@ -87,7 +86,7 @@ export default function RentPage() {
                       onChange={handleCheckboxChange}
                     />
                     <Label check className="custom-label" htmlFor="gulet">
-                      Gulet
+                      {t('rent.filter.filter1')}
                     </Label>
                   </div>
                   <div className="checkbox-group">
@@ -99,7 +98,7 @@ export default function RentPage() {
                       onChange={handleCheckboxChange}
                     />
                     <Label className="custom-label" htmlFor="motoryat" check>
-                      Motoryat
+                      {t('rent.filter.filter2')}
                     </Label>
                   </div>
                   <div className="checkbox-group">
@@ -111,7 +110,7 @@ export default function RentPage() {
                       onChange={handleCheckboxChange}
                     />
                     <Label className="custom-label" htmlFor="katamaran" check>
-                      Katamaran
+                      {t('rent.filter.filter3')}
                     </Label>
                   </div>
                   <div className="checkbox-group">
@@ -123,14 +122,14 @@ export default function RentPage() {
                       onChange={handleCheckboxChange}
                     />
                     <Label className="custom-label" htmlFor="yelkenli" check>
-                      Yelkenli
+                      {t('rent.filter.filter4')}
                     </Label>
                   </div>
                   <Button
                     className="btn btn-primary see-all"
                     onClick={handleShowAll}
                   >
-                    Tümünü Gör
+                    {t('rent.filter.button')}
                   </Button>
                 </Form>
               </div>
@@ -142,18 +141,16 @@ export default function RentPage() {
                     <RentCard
                       elementID={element._id}
                       name={element.name}
-                      type={element.type}
+                      type={element.type[i18n.language]}
                       length={element.length}
                       people={element.people}
                       cabin={element.cabin}
-                      currentYacht={element}
                     />
                   </div>
                 ))}
               </div>
             </section>
           </main>
-          <Footer />
         </>
       )}
     </>

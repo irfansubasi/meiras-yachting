@@ -1,11 +1,14 @@
+import { useTranslation } from 'react-i18next';
 import '../styles/Header.css';
 export default function Header({ page }) {
+  const { t } = useTranslation();
+
   if (page === 'home') {
     return (
       <header className="home-header">
         <div className="slogan container">
-          <h1 className="span-head">Mavi Denizlerdeki</h1>
-          <h1>Maceranız Bizimle Başlıyor</h1>
+          <h1 className="span-head">{t('home.welcome1')}</h1>
+          <h1>{t('home.welcome2')}</h1>
         </div>
       </header>
     );

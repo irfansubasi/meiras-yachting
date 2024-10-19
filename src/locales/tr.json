@@ -1,0 +1,90 @@
+{
+  "home": {
+    "welcome1": "Mavi Denizlerdeki",
+    "welcome2": "Maceranız Bizimle Başlıyor",
+    "discover1": "Unutulmaz Bir Deneyim İçin",
+    "discover2": "Yatlarımızı Keşfedin",
+    "discover-btn": "Keşfet",
+    "info1-p": "7/24 Destek",
+    "info1-span": "Her Durumda Yanınızdayız",
+    "info2-p": "Profesyonel Ekip",
+    "info2-span": "Profesyonel Çözümler",
+    "info3-p": "Lokasyon Seçenekleri",
+    "info3-span": "Marmaris, Bodrum, Göcek, Fethiye"
+  },
+
+  "about": {
+    "about-us": "Hakkımızda",
+    "description": "Meiras Yatçılık olarak, Türkiye’nin en gözde yat kiralama destinasyonlarından biri olan Marmaris, Bodrum, Göcek ve Fethiye'de sizlere unutulmaz bir deniz deneyimi sunmaktayız. Deniz tutkunlarına, lüks ve konforu bir araya getiren özel yat kiralama hizmetlerimizle, Ege ve Akdeniz'in eşsiz güzelliklerini keşfetme fırsatı sunuyoruz.",
+    "contact": "Bize Ulaşmak İçin"
+  },
+
+  "rent": {
+    "filter": {
+      "filter1": "Gulet",
+      "filter2": "Motoryat",
+      "filter3": "Katamaran",
+      "filter4": "Yelkenli",
+      "button": "Tümünü Gör"
+    },
+    "card": {
+      "people": "misafir",
+      "cabin": "kabin"
+    }
+  },
+
+  "services": {
+    "food": {
+      "food-h": "Kumanya Hizmetleri",
+      "food-p": "Bütün ihtiyaçlarınızı profesyonel ekibimiz ile sizin talepleriniz doğrultusunda karşılıyoruz.",
+      "food-desc1": "Yerel lezzetlerden dünya mutfaklarına kadar geniş bir ürün yelpazesi sunuyoruz.",
+      "food-desc2": "Hızlı ve güvenilir teslimat hizmetimiz sayesinde, talep ettiğiniz ürünler en kısa sürede yatınıza ulaştırılır.",
+      "food-desc3": "Yat kiralama hizmetlerimizde, her ayrıntının sizin için düşünüldüğünü bilmenin rahatlığıyla, sadece denizin ve tatilin keyfini çıkarın. Kumanya hizmetlerimizle ilgili daha fazla bilgi almak ve özel taleplerinizi iletmek için bizimle iletişime geçebilirsiniz."
+    },
+    "vip": {
+      "vip-h": "VIP Transfer",
+      "vip-p": "Havaalanı veya şehirlerarası transfer ihtiyacınızda lüks araçlarımız ile yanınızdayız.",
+      "vip-desc1": "Havaalanı veya şehirlerarası transfer ihtiyacınızda hizmetinizdeyiz.",
+      "vip-desc2": "VIP transfer hizmetimiz, özel karşılama ve uğurlama hizmetleriyle başlar.",
+      "vip-desc3": "Gizlilik ve güvenlik en ön planda tutulur.",
+      "vip-desc4": "VIP transfer hizmetimizle, yat kiralama deneyiminize prestij ve konfor katıyoruz. Ayrıcalıklı hizmetlerimizden faydalanmak ve daha fazla bilgi almak için bizimle iletişime geçebilirsiniz."
+    },
+    "cloth": {
+      "cloth-h": "Çamaşır Hizmeti",
+      "cloth-p": "İstenmeyen durumların tatil keyfinizi kaçırmaması için express ve normal kuru temizleme hizmetimiz mevcuttur.",
+      "cloth-desc1": "Misafirlerimizin konforunu ön planda tutarak, yatlarımızda konakladığınız süre boyunca çamaşır hizmeti sunuyoruz.",
+      "cloth-desc2": "Express ve kuru temizleme seçeneklerimizle, kıyafetleriniz her zaman temiz ve düzenli.",
+      "cloth-desc3": "Tatilinizi keyifle geçirirken, çamaşır işlerinizle biz ilgilenelim."
+    },
+    "technical": {
+      "technical-h": "Teknik Servis",
+      "technical-p": "Kusursuz ve sorunsuz bir tatil keyfi için hizmetinizdeyiz.",
+      "technical-desc1": "Tatiliniz boyunca ortaya çıkabilecek teknik aksaklıklar için hızlı müdahale garantisi sunuyoruz.",
+      "technical-desc2": "Teknenizin kışlık bakımlarını deneyimli iş ortaklarımızla birlikte gidermekteyiz.",
+      "technical-desc3": "Yat kiralama hizmetlerimizde sunduğumuz teknik servis desteği ile her zaman yanınızdayız. Daha fazla bilgi almak ve taleplerinizi iletmek için bizimle iletişime geçebilirsiniz."
+    }
+  },
+
+  "form": {
+    "heading": "BİLGİ AL",
+    "name": "Ad Soyad",
+    "phone": "Cep Telefonu",
+    "email": "E-mail",
+    "city": "Şehir",
+    "message": "Mesaj",
+    "button": "Gönder",
+    "success": "Başarıyla Gönderildi !",
+    "error": "Eksik veya yanlış bilgi girdiniz! Bilgilerinizi kontrol ediniz!"
+  },
+
+  "navbar": {
+    "home": "Anasayfa",
+    "about": "Hakkımızda",
+    "rent": "Yat Kiralama",
+    "services": "Hizmetlerimiz",
+    "brokerage": "Brokerage",
+    "contact": "İletişim"
+  },
+
+  "soon": "Çok yakında!"
+}

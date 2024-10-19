@@ -1,14 +1,18 @@
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { Card, CardBody, CardText, CardTitle } from 'reactstrap';
 export default function RentCard(props) {
-  const { elementID, name, type, length, people, cabin, currentYacht } = props;
+  const { elementID, name, type, length, people, cabin } = props;
+
+  const { t } = useTranslation();
+
   return (
     <Card
       style={{
         width: '100%',
       }}
     >
-      <Link to={`/rent/${elementID}`} state={{ currentYacht }}>
+      <Link to={`/rent/${elementID}`}>
         <div className="card-img">
           <img
             className="img-fluid coverImg"
@@ -22,7 +26,13 @@ export default function RentCard(props) {
           </CardTitle>
           <CardText className="d-flex justify-content-evenly">
             <span>{type.toUpperCase()}</span>|<span>{length}M</span>|
-            <span>{people} MİSAFİR</span>|<span>{cabin} KABİN</span>
+            <span>
+              {people} {t('rent.card.people').toUpperCase()}
+            </span>
+            |
+            <span>
+              {cabin} {t('rent.card.cabin').toUpperCase()}
+            </span>
           </CardText>
         </CardBody>
       </Link>

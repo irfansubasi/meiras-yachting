@@ -1,9 +1,9 @@
-import Nav from '../components/Nav';
+import { useTranslation } from 'react-i18next';
 
 export default function SoonPage() {
+  const { t } = useTranslation();
   return (
     <>
-      <Nav />
       <div
         className="d-flex flex-column justify-content-center align-items-center vh-100 position-relative"
         style={{ backgroundColor: '#35465C' }}
@@ -12,7 +12,7 @@ export default function SoonPage() {
           style={{ fontSize: '5rem', fontFamily: 'Montserrat', zIndex: '999' }}
           className="fw-bold text-white mt-5 text-center"
         >
-          Çok yakında!
+          {t('soon')}
         </p>
       </div>
     </>

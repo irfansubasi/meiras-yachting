@@ -1,0 +1,90 @@
+{
+  "home": {
+    "welcome1": "In the Blue Seas,",
+    "welcome2": "Your Adventure Begins With Us",
+    "discover1": "Discover Our Yachts",
+    "discover2": "for an Unforgettable Experience",
+    "discover-btn": "Discover",
+    "info1-p": "24/7 Support",
+    "info1-span": "We Are Here for You in Every Situation",
+    "info2-p": "Professional Team",
+    "info2-span": "Professional Solutions",
+    "info3-p": "Location Options",
+    "info3-span": "Marmaris, Bodrum, Göcek, Fethiye"
+  },
+
+  "about": {
+    "about-us": "About Us",
+    "description": "As Meiras Yachting, we offer you an unforgettable sea experience in Marmaris, Bodrum, Göcek, and Fethiye which are among Turkey's most popular yacht rental destinations. With our private yacht rental services that combine luxury and comfort, we provide you the opportunity to explore the unique beauties of the Aegean and Mediterranean.",
+    "contact": "Contact Us"
+  },
+
+  "rent": {
+    "filter": {
+      "filter1": "Gulet",
+      "filter2": "Motor Yacht",
+      "filter3": "Catamaran",
+      "filter4": "Sailboat",
+      "button": "View All"
+    },
+    "card": {
+      "people": "guests",
+      "cabin": "cabins"
+    }
+  },
+
+  "services": {
+    "food": {
+      "food-h": "Provisions Services",
+      "food-p": "We meet all your needs in accordance with your requests with our professional team.",
+      "food-desc1": "We offer a wide range of products from local flavors to international cuisines.",
+      "food-desc2": "Thanks to our fast and reliable delivery service, the products you requested are delivered to your yacht in the shortest time possible.",
+      "food-desc3": "With our yacht rental services, enjoy the comfort of knowing that every detail has been considered for you, allowing you to simply enjoy the sea and your holiday. You can contact us for more information about our provisions services and to convey your special requests."
+    },
+    "vip": {
+      "vip-h": "VIP Transfer",
+      "vip-p": "We are at your service with our luxury vehicles for your airport or intercity transfer needs.",
+      "vip-desc1": "We are at your service for your airport or intercity transfer needs.",
+      "vip-desc2": "Our VIP transfer service starts with special welcoming and farewell services.",
+      "vip-desc3": "Confidentiality and security are prioritized.",
+      "vip-desc4": "With our VIP transfer service, we add prestige and comfort to your yacht rental experience. You can contact us to take advantage of our exclusive services and for more information."
+    },
+    "cloth": {
+      "cloth-h": "Laundry Service",
+      "cloth-p": "To ensure unwanted situations do not spoil your holiday pleasure, we offer express and regular dry cleaning services.",
+      "cloth-desc1": "Prioritizing the comfort of our guests, we provide laundry service during your stay on our yachts.",
+      "cloth-desc2": "With our express and dry cleaning options, your clothes are always clean and tidy.",
+      "cloth-desc3": "While you enjoy your holiday, let us take care of your laundry."
+    },
+    "technical": {
+      "technical-h": "Technical Service",
+      "technical-p": "We are at your service for a flawless and trouble-free holiday experience.",
+      "technical-desc1": "We offer a guarantee of quick intervention for any technical issues that may arise during your holiday.",
+      "technical-desc2": "We address your boat's winter maintenance with our experienced partners.",
+      "technical-desc3": "We are always with you with the technical service support we provide in our yacht rental services. You can contact us for more information and to convey your requests."
+    }
+  },
+
+  "form": {
+    "heading": "GET INFO",
+    "name": "Full Name",
+    "phone": "Mobile Phone",
+    "email": "E-mail",
+    "city": "City",
+    "message": "Message",
+    "button": "Send",
+    "success": "Successfully Sent!",
+    "error": "You have entered missing or incorrect information! Please check your details!"
+  },
+
+  "navbar": {
+    "home": "Home",
+    "about": "About Us",
+    "rent": "Yacht Rental",
+    "services": "Our Services",
+    "brokerage": "Brokerage",
+    "contact": "Contact"
+  },
+
+  "soon": "Coming Soon!"
+}

@@ -124,6 +124,10 @@
   color: #092649;
 }
 
+.features-list-item.empty::before {
+  content: '';
+}
+
 .form-section {
   display: flex;
   justify-content: center;

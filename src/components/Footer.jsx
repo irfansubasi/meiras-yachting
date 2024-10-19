@@ -4,9 +4,12 @@ import { faInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import '../styles/Footer.css';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 export default function Footer() {
   let year = new Date().getFullYear();
+
+  const { t } = useTranslation();
 
   return (
     <footer>
@@ -43,24 +46,24 @@ export default function Footer() {
         <div className="site-map d-flex">
           <ul>
             <li>
-              <Link to="/">Anasayfa</Link>
+              <Link to="/">{t('navbar.home')}</Link>
             </li>
             <li>
-              <Link to="/about">Hakkımızda</Link>
+              <Link to="/about">{t('navbar.about')}</Link>
             </li>
             <li>
-              <Link to="/rent">Yat Kiralama</Link>
+              <Link to="/rent">{t('navbar.rent')}</Link>
             </li>
           </ul>
           <ul>
             <li>
-              <Link to="/services">Hizmetlerimiz</Link>
+              <Link to="/services">{t('navbar.services')}</Link>
             </li>
             <li>
-              <Link to="/">Brokerage</Link>
+              <Link to="/">{t('navbar.brokerage')}</Link>
             </li>
             <li>
-              <Link to="/contact">İletişim</Link>
+              <Link to="/contact">{t('navbar.contact')}</Link>
             </li>
           </ul>
         </div>
