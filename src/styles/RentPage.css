@@ -11,6 +11,25 @@
   justify-content: center;
 }
 
+.brokerage-heading {
+  background-color: #092648 !important;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  transform: translate(-50%, -50%);
+  top: 515px;
+  left: 50%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.temp-card {
+  max-width: 320px;
+  margin-bottom: 10rem !important;
+}
+
 .categories form {
   width: 100%;
   display: flex;
@@ -121,12 +140,24 @@
     padding: 1.2rem !important;
   }
 
+  .brokerage-heading {
+    margin: 0;
+    position: unset !important;
+    transform: none;
+    width: 100%;
+    padding: 2.2rem !important;
+  }
+
   .categories label {
     font-size: 1rem !important;
   }
 
   .catalog-section {
     margin-top: 0;
+  }
+
+  .temp-card {
+    margin: 10rem 0 !important;
   }
 
   .checkbox-group {
@@ -146,5 +177,9 @@
 @media (max-height: 800px) {
   .categories {
     top: 320px;
+  }
+
+  .brokerage-heading {
+    top: 300px;
   }
 }

@@ -37,6 +37,11 @@ export default function Header({ page }) {
         ...styleType,
         backgroundImage: "url('../assets/services-header.webp')",
       };
+    } else if (page === 'brokerage') {
+      styleType = {
+        ...styleType,
+        backgroundImage: "url('../assets/brokerage-header.webp')",
+      };
     }
 
     return <header className="header" style={styleType}></header>;

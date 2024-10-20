@@ -60,7 +60,7 @@ export default function Footer() {
               <Link to="/services">{t('navbar.services')}</Link>
             </li>
             <li>
-              <Link to="/">{t('navbar.brokerage')}</Link>
+              <Link to="/brokerage">{t('navbar.brokerage')}</Link>
             </li>
             <li>
               <Link to="/contact">{t('navbar.contact')}</Link>

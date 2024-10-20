@@ -33,6 +33,11 @@
     }
   },
 
+  "brokerage": {
+    "h1": "Brokerage",
+    "h2": "Find Your Dream Yacht"
+  },
+
   "services": {
     "food": {
       "food-h": "Provisions Services",

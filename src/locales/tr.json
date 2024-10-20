@@ -33,6 +33,11 @@
     }
   },
 
+  "brokerage": {
+    "h1": "Brokerage",
+    "h2": "Hayalinizdeki Tekneyi Bulun"
+  },
+
   "services": {
     "food": {
       "food-h": "Kumanya Hizmetleri",

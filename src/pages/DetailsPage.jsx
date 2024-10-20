@@ -7,7 +7,7 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { useLoading } from '../contexts/LoadingContext';
 
-export default function DetailsPage() {
+export default function DetailsPage({ req }) {
   const { i18n, t } = useTranslation();
   const [currentYacht, setCurrentYacht] = useState({
     features: {
@@ -17,7 +17,7 @@ export default function DetailsPage() {
     name: '',
     length: 0,
     people: 0,
-    cabin: 0,
+    ...(req === 'rent' && { cabin: 0 }),
     images: 0,
   });
   const { id } = useParams();
@@ -38,7 +38,11 @@ export default function DetailsPage() {
     const fetchYachts = async () => {
       setLoading(true);
       try {
-        const response = await axios.get(`${backendURL}/yachts/${id}`);
+        const response = await axios.get(
+          req === 'rent'
+            ? `${backendURL}/yachts/${id}`
+            : `${backendURL}/brokerage/${id}`
+        );
         const data = response.data;
         setCurrentYacht(data);
         setLoading(false);
@@ -48,7 +52,7 @@ export default function DetailsPage() {
     };
 
     fetchYachts();
-  }, [id, setLoading]);
+  }, [id, setLoading, req]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -57,11 +61,12 @@ export default function DetailsPage() {
   useEffect(() => {
     const imageCount = currentYacht.images;
     const imagePaths = [];
+    const folder = req === 'rent' ? 'yachtspics' : 'brokerage';
     for (let i = 1; i <= imageCount; i++) {
-      imagePaths.push(`/assets/yachtspics/${currentYacht._id}/${i}.webp`);
+      imagePaths.push(`/assets/${folder}/${currentYacht._id}/${i}.webp`);
     }
     setImages(imagePaths);
-  }, [currentYacht]);
+  }, [currentYacht, req]);
 
   useEffect(() => {
     if (manualScroll.current && thumbnailRef.current) {
@@ -173,16 +178,27 @@ export default function DetailsPage() {
                     </span>
                   </div>
 
-                  <div className="vertical-divider"></div>
-                  <div className="heading-item">
-                    <img src="../../assets/cabin.svg" alt="cabin" />
-                    <span className="item-text">
-                      {currentYacht.cabin} {t('rent.card.cabin').toUpperCase()}
-                    </span>
-                  </div>
+                  {req === 'rent' && (
+                    <>
+                      <div className="vertical-divider"></div>
+                      <div className="heading-item">
+                        <img src="../../assets/cabin.svg" alt="cabin" />
+                        <span className="item-text">
+                          {currentYacht.cabin}{' '}
+                          {t('rent.card.cabin').toUpperCase()}
+                        </span>
+                      </div>
+                    </>
+                  )}
                 </div>
                 <div className="features d-flex justify-content-center align-items-center">
-                  <ul className="features-list">
+                  <ul
+                    className={
+                      req === 'brokerage'
+                        ? 'features-list-brokerage'
+                        : 'features-list'
+                    }
+                  >
                     {currentYacht.features[i18n.language].map((feat, index) => (
                       <li className="features-list-item" key={index}>
                         {feat}
