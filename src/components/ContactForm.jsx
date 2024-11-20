@@ -1,10 +1,30 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import '../styles/Form.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useTranslation } from 'react-i18next';
 export default function ContactForm() {
   const { t } = useTranslation();
+
+  const [siteKey, setSiteKey] = useState(null);
+
+  useEffect(() => {
+    fetch(
+      'https://meirasyachting-backend-production.up.railway.app/get-recaptcha-site-key'
+    )
+      .then((response) => response.json())
+      .then((data) => setSiteKey(data.siteKey))
+      .catch((error) => console.error('Error fetching site key:', error));
+  }, []);
+
+  useEffect(() => {
+    if (siteKey) {
+      const script = document.createElement('script');
+      script.src = `https://www.google.com/recaptcha/api.js?render=${siteKey}`;
+      script.async = true;
+      document.head.appendChild(script);
+    }
+  }, [siteKey]);
 
   const [formData, setFormData] = useState({
     user_name: '',
@@ -24,6 +44,35 @@ export default function ContactForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    if (!siteKey) {
+      console.error('reCAPTCHA site key is not loaded');
+      return;
+    }
+
+    window.grecaptcha.execute(siteKey, { action: 'submit' }).then((token) => {
+      fetch(
+        'https://meirasyachting-backend-production.up.railway.app/verify-recaptcha',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ recaptchaToken: token }),
+        }
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.message) {
+            console.log(data.message);
+          } else if (data.error) {
+            console.error(data.error);
+          }
+        })
+        .catch((error) =>
+          console.error('Error during reCAPTCHA verification:', error)
+        );
+    });
+
     fetch(
       'https://meirasyachting-backend-production.up.railway.app/send-email',
       {
@@ -38,6 +87,13 @@ export default function ContactForm() {
       .then((data) => {
         if (data.message) {
           toast.success(t('form.success'));
+          setFormData({
+            user_name: '',
+            user_phone: '',
+            user_email: '',
+            user_location: '',
+            user_message: '',
+          });
         } else if (data.errorKey) {
           toast.error(t(`form.${data.errorKey}`));
         }
@@ -66,6 +122,7 @@ export default function ContactForm() {
                   placeholder="Ad Soyad"
                   required
                   onChange={handleChange}
+                  value={formData.user_name}
                 />
                 <label htmlFor="nameandsurname" className="form-label">
                   {t('form.name')}
@@ -82,6 +139,7 @@ export default function ContactForm() {
                   placeholder="Cep Telefonu"
                   onChange={handleChange}
                   required
+                  value={formData.user_phone}
                 />
                 <label htmlFor="phone">{t('form.phone')}</label>
               </div>
@@ -96,6 +154,7 @@ export default function ContactForm() {
                   name="user_email"
                   onChange={handleChange}
                   required
+                  value={formData.user_email}
                 />
                 <label htmlFor="mail">{t('form.email')}</label>
               </div>
@@ -110,6 +169,7 @@ export default function ContactForm() {
                   placeholder="Şehir"
                   onChange={handleChange}
                   required
+                  value={formData.user_location}
                 />
                 <label htmlFor="city">{t('form.city')}</label>
               </div>
@@ -123,6 +183,7 @@ export default function ContactForm() {
                   placeholder="Mesaj"
                   onChange={handleChange}
                   required
+                  value={formData.user_message}
                 ></textarea>
                 <label htmlFor="message">{t('form.message')}</label>
               </div>
