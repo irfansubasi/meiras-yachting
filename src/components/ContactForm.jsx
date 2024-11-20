@@ -64,44 +64,49 @@ export default function ContactForm() {
         .then((data) => {
           if (data.message) {
             console.log(data.message);
+            sendEmail();
           } else if (data.error) {
             console.error(data.error);
+            toast.error(t('form.recaptchaError'));
           }
         })
-        .catch((error) =>
-          console.error('Error during reCAPTCHA verification:', error)
-        );
+        .catch((error) => {
+          console.error('Error during reCAPTCHA verification:', error);
+          toast.error(t('form.recaptchaError'));
+        });
     });
 
-    fetch(
-      'https://meirasyachting-backend-production.up.railway.app/send-email',
-      {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      }
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        if (data.message) {
-          toast.success(t('form.success'));
-          setFormData({
-            user_name: '',
-            user_phone: '',
-            user_email: '',
-            user_location: '',
-            user_message: '',
-          });
-        } else if (data.errorKey) {
-          toast.error(t(`form.${data.errorKey}`));
+    const sendEmail = () => {
+      fetch(
+        'https://meirasyachting-backend-production.up.railway.app/send-email',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
         }
-      })
-      .catch((error) => {
-        console.error('Error:', error);
-        toast.error(t('form.error'));
-      });
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.message) {
+            toast.success(t('form.success'));
+            setFormData({
+              user_name: '',
+              user_phone: '',
+              user_email: '',
+              user_location: '',
+              user_message: '',
+            });
+          } else if (data.errorKey) {
+            toast.error(t(`form.${data.errorKey}`));
+          }
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+          toast.error(t('form.error'));
+        });
+    };
   };
 
   return (
