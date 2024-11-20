@@ -80,7 +80,7 @@
     "button": "Gönder",
     "success": "Başarıyla Gönderildi !",
     "error": "Eksik veya yanlış bilgi girdiniz! Bilgilerinizi kontrol ediniz!",
-    "rateLimitExceeded": "You have exceeded the email sending limit. Please try again after 5 minutes."
+    "rateLimitExceeded": "Email gönderim limitini aştınız. Lütfen 5 dakika sonra tekrar deneyiniz."
   },
 
   "navbar": {
