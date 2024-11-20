@@ -79,7 +79,8 @@
     "message": "Message",
     "button": "Send",
     "success": "Successfully Sent!",
-    "error": "You have entered missing or incorrect information! Please check your details!"
+    "error": "You have entered missing or incorrect information! Please check your details!",
+    "rateLimitExceeded": "You have exceeded the email sending limit. Please try again after 5 minutes."
   },
 
   "navbar": {

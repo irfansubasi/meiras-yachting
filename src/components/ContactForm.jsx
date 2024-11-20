@@ -38,6 +38,8 @@ export default function ContactForm() {
       .then((data) => {
         if (data.message) {
           toast.success(t('form.success'));
+        } else if (data.errorKey) {
+          toast.error(t(`form.${data.errorKey}`));
         }
       })
       .catch((error) => {

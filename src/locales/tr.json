@@ -79,7 +79,8 @@
     "message": "Mesaj",
     "button": "Gönder",
     "success": "Başarıyla Gönderildi !",
-    "error": "Eksik veya yanlış bilgi girdiniz! Bilgilerinizi kontrol ediniz!"
+    "error": "Eksik veya yanlış bilgi girdiniz! Bilgilerinizi kontrol ediniz!",
+    "rateLimitExceeded": "You have exceeded the email sending limit. Please try again after 5 minutes."
   },
 
   "navbar": {
