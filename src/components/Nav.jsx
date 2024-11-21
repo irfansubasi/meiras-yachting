@@ -1,11 +1,13 @@
 import { useTranslation } from 'react-i18next';
 import navLogo from '../assets/nav-logo.png';
 import '../styles/Nav.css';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 
 export default function Nav() {
   const { t, i18n } = useTranslation();
+
+  const location = useLocation();
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
@@ -18,6 +20,13 @@ export default function Nav() {
       i18n.changeLanguage(savedLanguage);
     }
   }, [i18n]);
+
+  useEffect(() => {
+    const navbarContent = document.getElementById('navbarContent');
+    if (navbarContent && navbarContent.classList.contains('show')) {
+      navbarContent.classList.remove('show');
+    }
+  }, [location]);
 
   return (
     <nav className="navbar navbar-expand-lg fixed-top bg-white p-2 px-5 shadow">
