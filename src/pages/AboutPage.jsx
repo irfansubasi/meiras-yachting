@@ -6,12 +6,44 @@ import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import '../styles/AboutPage.css';
 import { useTranslation } from 'react-i18next';
+import { Helmet } from 'react-helmet';
 
 export default function About() {
   const { t } = useTranslation();
 
   return (
     <>
+      <Helmet>
+        <meta
+          name="description"
+          content="Meiras Yachting hakkında bilgi edinin. Akdeniz ve Ege'de yat kiralama ve satış hizmetlerinde neden öncü olduğumuzu öğrenin."
+        />
+        <meta
+          name="keywords"
+          content="Meiras Yachting, hakkında, yat kiralama, lüks yat, yat satış, Akdeniz, Ege, lüks yat hizmetleri"
+        />
+        <meta property="og:title" content="Meiras Yachting - Hakkımızda" />
+        <meta
+          property="og:description"
+          content="Meiras Yachting hakkında bilgi edinin. Akdeniz ve Ege'de yat kiralama ve satış hizmetlerinde neden öncü olduğumuzu öğrenin."
+        />
+        <meta property="og:url" content="https://meirasyachting.com/about" />
+        <meta
+          property="og:image"
+          content="https://meirasyachting.com/assets/about-header.webp"
+        />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Meiras Yachting - Hakkımızda" />
+        <meta
+          name="twitter:description"
+          content="Meiras Yachting hakkında bilgi edinin. Akdeniz ve Ege'de yat kiralama ve satış hizmetlerinde neden öncü olduğumuzu öğrenin."
+        />
+        <meta
+          name="twitter:image"
+          content="https://meirasyachting.com/assets/about-header.webp"
+        />
+      </Helmet>
       <Header page="about" />
       <main>
         <section className="about-section" style={{ height: '115vh' }}>

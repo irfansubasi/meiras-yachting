@@ -5,12 +5,44 @@ import planeSVG from '../../public/assets/plane.svg';
 import clothingSVG from '../../public/assets/clothing.svg';
 import gearSVG from '../../public/assets/gear.svg';
 import { useTranslation } from 'react-i18next';
+import { Helmet } from 'react-helmet';
 
 export default function ServicesPage() {
   const { t } = useTranslation();
 
   return (
     <>
+      <Helmet>
+        <meta
+          name="description"
+          content="Meiras Yachting'in sunduğu yat kiralama, yat satışı ve özel tur hizmetleriyle Akdeniz ve Ege'de lüks bir deneyim yaşayın."
+        />
+        <meta
+          name="keywords"
+          content="yat kiralama hizmetleri, lüks yat kiralama, özel yat turları, yat satışı, Akdeniz yat turları, Ege yat kiralama, Meiras Yachting hizmetler"
+        />
+        <meta property="og:title" content="Meiras Yachting - Hizmetlerimiz" />
+        <meta
+          property="og:description"
+          content="Meiras Yachting'in sunduğu yat kiralama, yat satışı ve özel tur hizmetleriyle Akdeniz ve Ege'de lüks bir deneyim yaşayın."
+        />
+        <meta property="og:url" content="https://meirasyachting.com/services" />
+        <meta
+          property="og:image"
+          content="https://meirasyachting.com/assets/services-header.webp"
+        />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Meiras Yachting - Hizmetlerimiz" />
+        <meta
+          name="twitter:description"
+          content="Meiras Yachting'in sunduğu yat kiralama, yat satışı ve özel tur hizmetleriyle Akdeniz ve Ege'de lüks bir deneyim yaşayın."
+        />
+        <meta
+          name="twitter:image"
+          content="https://meirasyachting.com/assets/services-header.webp"
+        />
+      </Helmet>
       <Header page="services" />
       <main className="mb-4">
         <section className="services" style={{ height: '50vh' }}>

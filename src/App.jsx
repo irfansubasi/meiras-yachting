@@ -19,6 +19,7 @@ import Nav from './components/Nav';
 import Footer from './components/Footer';
 import { useEffect } from 'react';
 import BrokeragePage from './pages/BrokeragePage';
+import { Helmet } from 'react-helmet';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -34,6 +35,37 @@ export default function App() {
   return (
     <LoadingProvider>
       <Router>
+        <Helmet>
+          <meta
+            name="description"
+            content="Meiras Yachting ile Akdeniz ve Ege'nin eşsiz güzelliklerini keşfedin. Lüks yat kiralama ve satış hizmetlerimizle unutulmaz deneyimler yaşayın."
+          />
+          <meta
+            name="keywords"
+            content="yat kiralama, lüks yat, yat satış, Akdeniz, Ege, özel tur, Meiras Yachting, fethiye yat kiralama, marmaris yat kiralama, göcek yat kiralama, bodrum yat kiralama"
+          />
+          <meta property="og:title" content="Meiras Yachting" />
+          <meta
+            property="og:description"
+            content="Meiras Yachting ile Akdeniz ve Ege'nin eşsiz güzelliklerini keşfedin. Lüks yat kiralama ve satış hizmetlerimizle unutulmaz deneyimler yaşayın."
+          />
+          <meta property="og:url" content="https://meirasyachting.com/" />
+          <meta
+            property="og:image"
+            content="https://meirasyachting.com/assets/header.webp"
+          />
+          <meta property="og:type" content="website" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="Meiras Yachting" />
+          <meta
+            name="twitter:description"
+            content="Meiras Yachting ile Akdeniz ve Ege'nin eşsiz güzelliklerini keşfedin. Lüks yat kiralama ve satış hizmetlerimizle unutulmaz deneyimler yaşayın."
+          />
+          <meta
+            name="twitter:image"
+            content="https://meirasyachting.com/assets/header.webp"
+          />
+        </Helmet>
         <ScrollToTop />
         <Nav />
         <Routes>

@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { useLoading } from '../contexts/LoadingContext';
+import { Helmet } from 'react-helmet';
 
 export default function DetailsPage({ req }) {
   const { i18n, t } = useTranslation();
@@ -115,6 +116,47 @@ export default function DetailsPage({ req }) {
 
   return (
     <>
+      <Helmet>
+        <title>{`Meiras Yachting - ${currentYacht.name}`}</title>
+        <meta
+          name="description"
+          content={`${currentYacht.name}. Akdeniz ve Ege'de lüks bir deneyim için bu yatı keşfedin.`}
+        />
+        <meta
+          name="keywords"
+          content={`yat ${currentYacht.name}, lüks yat, yat kiralama, yat`}
+        />
+        <meta
+          property="og:title"
+          content={`Meiras Yachting - ${currentYacht.name}`}
+        />
+        <meta
+          property="og:description"
+          content={`${currentYacht.name}. Akdeniz ve Ege'de lüks bir deneyim için bu yatı keşfedin.`}
+        />
+        <meta
+          property="og:image"
+          content={`https://meirasyachting.com/assets/rent-header.webp`}
+        />
+        <meta
+          property="og:url"
+          content={`https://meirasyachting.com/rent/${currentYacht._id}`}
+        />
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content={`Meiras Yachting - ${currentYacht.name}`}
+        />
+        <meta
+          name="twitter:description"
+          content={`${currentYacht.name}. Akdeniz ve Ege'de lüks bir deneyim için bu yatı keşfedin.`}
+        />
+        <meta
+          name="twitter:image"
+          content={`https://meirasyachting.com/assets/rent-header.webp`}
+        />
+      </Helmet>
       {loading && (
         <div className="loading-container">
           <img className="loading" src="../../assets/loading.png" />
