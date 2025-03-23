@@ -18,7 +18,7 @@ export default function RentPage() {
     yelkenli: false,
   });
 
-  const backendURL = 'https://meirasyachting-backend-production.up.railway.app';
+  const backendURL = 'https://meirasyachtingapi.koyeb.app';
 
   const { loading, setLoading } = useLoading();
 

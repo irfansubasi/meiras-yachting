@@ -10,7 +10,7 @@ export default function BrokeragePage() {
   const { t, i18n } = useTranslation();
   const [yachts, setYachts] = useState([]);
 
-  const backendURL = 'https://meirasyachting-backend-production.up.railway.app';
+  const backendURL = 'https://meirasyachtingapi.koyeb.app';
 
   const { loading, setLoading } = useLoading();
 
