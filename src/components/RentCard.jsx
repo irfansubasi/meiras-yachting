@@ -17,6 +17,8 @@ export default function RentCard(props) {
           <img
             className="img-fluid coverImg"
             src={`../../assets/yachtspics/${elementID}/cover.webp`}
+            loading="lazy"
+            alt={`${name} - ${type} yat görseli`}
           />
         </div>
 

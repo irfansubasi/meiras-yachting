@@ -18,6 +18,8 @@ export default function BrokerageCard(props) {
           <img
             className="img-fluid coverImg"
             src={`../../assets/brokerage/${elementID}/cover.webp`}
+            loading="lazy"
+            alt={`${name} - ${type} yat satış görseli`}
           />
         </div>
 
